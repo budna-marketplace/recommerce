@@ -1,0 +1,55 @@
+{
+  "id": "rc-030",
+  "skill": "recommerce-kits",
+  "title": "The equipment already on the desk",
+  "pair": "podcast-completeness",
+  "category": "podcast-equipment",
+  "request": "Complete my two-person used podcast setup under an inclusive 600.00 SEK delivered budget. Both people must record and monitor simultaneously. Use the supplied inventory and offers; tell me only what still needs buying.",
+  "evidence": [
+    {
+      "id": "inventory",
+      "kind": "buyer_observation",
+      "text": "I own two working Norvale Hand microphones, two working XLR cables, a suitable laptop and compatible recording software. We are happy to hold the microphones. I do not own an interface or headphones."
+    },
+    {
+      "id": "manual",
+      "kind": "model_documentation",
+      "text": "All products and sources here are fictional. Norvale Duo H records two Hand microphones simultaneously using the two XLR cables and its included USB cable. It has two independent headphone outputs, each directly compatible with one Norvale Listen headset. No splitter, headphone adapter, external supply or stand is required for this configuration."
+    },
+    {
+      "id": "seller",
+      "kind": "seller_claim",
+      "text": "One seller offers a working Duo H with USB cable for 300.00 SEK and two working Listen headsets for 100.00 SEK each. The seller explicitly quotes one combined 50.00 SEK delivery charge for all three items together, including every mandatory fee."
+    },
+    {
+      "id": "status",
+      "kind": "marketplace_record",
+      "text": "The interface and both headsets are currently active and available in this synthetic snapshot."
+    }
+  ],
+  "rubric": {
+    "hard_failures": [
+      {
+        "id": "h1",
+        "text": "Claims the setup exceeds 600.00 SEK by charging delivery separately per item, or requires buying duplicate microphones or XLR cables despite the supplied working inventory."
+      }
+    ],
+    "usefulness": [
+      {
+        "id": "u1",
+        "text": "Lists one interface and two headsets as the purchases, with one combined delivery charge and a 550.00 SEK total."
+      },
+      {
+        "id": "u2",
+        "text": "Maps both microphone inputs and both monitoring outputs using the documented exact models."
+      },
+      {
+        "id": "u3",
+        "text": "Makes the complete setup actionable without inventing missing mandatory components or reopening established inventory questions."
+      }
+    ],
+    "acceptable_outcomes": [
+      "Recommend the three-item combined order at 550.00 SEK, with 50.00 SEK remaining and ordinary condition uncertainty."
+    ]
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "id": "rc-035",
+  "skill": "recommerce-collect",
+  "title": "It fits the utility room but not the van",
+  "pair": "collection-constraints",
+  "category": "washing-machines",
+  "request": "Can I use my borrowed van to collect this washing machine? My inclusive budget is 500.00 SEK. Consider only the supplied item and vehicle information.",
+  "evidence": [
+    {
+      "id": "listing",
+      "kind": "seller_claim",
+      "text": "Fictional listing: a working Rill W60 washing machine for 400.00 SEK, disconnected and ready at a level ground-floor entrance. A professional carrying crew is available without charge through the buyer’s employer, but transport is not included."
+    },
+    {
+      "id": "manual",
+      "kind": "model_documentation",
+      "text": "Fictional Rill W60 transport instructions require upright transport. The machine is 60 cm wide, 65 cm deep and 85 cm high, weighs 90 kg, and has no removable structural sections that reduce the 60 cm minimum horizontal width. Transit hardware is supplied."
+    },
+    {
+      "id": "measurements",
+      "kind": "buyer_observation",
+      "text": "The room and the straight ground-floor routes at both ends have adequate measured clearance for this exact upright machine. The borrowed van’s only loading aperture is 55 cm wide by 110 cm high. The remaining permitted payload after the driver, fuel and equipment is 70 kg. Its internal cargo floor is 150 by 120 cm. Borrowing and fuel cost nothing."
+    },
+    {
+      "id": "alternatives",
+      "kind": "marketplace_record",
+      "text": "No alternative vehicle or delivery quote is present in the supplied synthetic records."
+    }
+  ],
+  "rubric": {
+    "hard_failures": [
+      {
+        "id": "h1",
+        "text": "Approves the borrowed van despite its 55 cm aperture or the 90 kg machine exceeding the remaining 70 kg payload."
+      },
+      {
+        "id": "h2",
+        "text": "Proposes tilting, unsupported dismantling or multiple trips as a way to make this indivisible machine satisfy these vehicle constraints."
+      }
+    ],
+    "usefulness": [
+      {
+        "id": "u1",
+        "text": "Identifies aperture and payload as independent blockers even though the room, access routes and cargo floor fit."
+      },
+      {
+        "id": "u2",
+        "text": "Leaves 100.00 SEK for a fully quoted suitable transport alternative and does not assume such transport is available at that price."
+      },
+      {
+        "id": "u3",
+        "text": "Recommends changing the vehicle or obtaining suitable delivery before committing, without instructing unsafe loading."
+      }
+    ],
+    "acceptable_outcomes": [
+      "Reject this vehicle and seek a suitable transport quote within the remaining 100.00 SEK, or retain the item only as conditional on a revised plan or budget."
+    ]
+  }
+}

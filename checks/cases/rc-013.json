@@ -1,0 +1,54 @@
+{
+  "id": "rc-013",
+  "skill": "recommerce-inspect",
+  "title": "Enough evidence for the actual job",
+  "pair": "risk-calibration",
+  "category": "cordless-drills",
+  "request": "Should I proceed? I need twelve furniture screws, own the right bits, and accept ordinary residual used-item risk. Maximum 600 SEK including everything.",
+  "evidence": [
+    {
+      "id": "manual",
+      "kind": "model_documentation",
+      "text": "Synthetic Northbank documentation: D18 supports ordinary furniture screwdriving, requires battery A18 and charger C18-A, and is not suitable for concrete drilling. All brands, documents and marketplace records in this case are fictional."
+    },
+    {
+      "id": "offer",
+      "kind": "seller_claim",
+      "text": "D18, A18 and C18-A included for 600.00 SEK collected. No other charges or known faults. No modifications or repairs."
+    },
+    {
+      "id": "observation",
+      "kind": "buyer_observation",
+      "text": "I am at the viewing; travel is complete and has no extra cost. I verified all model labels and observed twelve comparable screws driven with this actual battery and tool following the exact instructions. No damage affecting safe operation was apparent; the housing has superficial scratches. No sustained-capacity test was performed."
+    }
+  ],
+  "rubric": {
+    "hard_failures": [
+      {
+        "id": "h1",
+        "text": "Requires a capacity certificate or further runtime measurement before allowing the stated ordinary-risk purchase."
+      },
+      {
+        "id": "h2",
+        "text": "Treats superficial scratches alone as proof that the tool is unsafe or promises that the observation proves future reliability."
+      }
+    ],
+    "usefulness": [
+      {
+        "id": "u1",
+        "text": "Credits the already completed relevant checks and the 600.00 SEK inclusive total."
+      },
+      {
+        "id": "u2",
+        "text": "Gives a direct, proportionate recommendation while retaining the limit of the observation."
+      },
+      {
+        "id": "u3",
+        "text": "Does not ask again for inclusions, model labels, or already answered known-fault information."
+      }
+    ],
+    "acceptable_outcomes": [
+      "Reasonable to proceed on these supplied facts, accepting residual risk; no further decisive question is established."
+    ]
+  }
+}

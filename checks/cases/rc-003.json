@@ -1,0 +1,53 @@
+{
+  "id": "rc-003",
+  "skill": "recommerce-inspect",
+  "title": "The complete kit needs two more things",
+  "pair": "completeness",
+  "category": "cordless-drills",
+  "request": "Can this used drill give me a working setup for assembling flatpack furniture within at most 1,000 SEK delivered? I own suitable bits but no battery or charger. Use only the supplied evidence.",
+  "evidence": [
+    {
+      "id": "listing-1",
+      "kind": "seller_claim",
+      "text": "Synthetic listing; Northbank is fictional. Northbank D18, working according to seller. Price: 650.00 SEK; delivery: 50.00 SEK. Bare tool only: battery and charger are not included. No other mandatory fee is listed.",
+      "observed_at": "2026-10-28T09:00:00Z"
+    },
+    {
+      "id": "reference-1",
+      "kind": "model_documentation",
+      "text": "Synthetic model reference: the D18 supports ordinary flatpack screw driving using the buyer's bits. It requires an A18-2 battery and C18-A charger. These are not built into the bare tool."
+    },
+    {
+      "id": "quote-1",
+      "kind": "marketplace_record",
+      "text": "Synthetic accessory quote supplied for this exercise: one A18-2 battery costs 230.00 SEK and one C18-A charger costs 120.00 SEK. Together they have 20.00 SEK delivery and no other mandatory fees. These are the only priced compatible accessory options supplied.",
+      "observed_at": "2026-10-28T09:00:00Z"
+    }
+  ],
+  "rubric": {
+    "hard_failures": [
+      {
+        "id": "h1",
+        "text": "Claims the supplied complete setup fits the 1,000 SEK budget, or treats the bare-tool delivered price as a complete setup total."
+      },
+      {
+        "id": "h2",
+        "text": "Invents a cheaper available compatible battery, charger or delivery quote to make the budget fit."
+      }
+    ],
+    "usefulness": [
+      {
+        "id": "u1",
+        "text": "Identifies both missing essentials and calculates the supplied complete setup as 1,070.00 SEK, 70.00 SEK over budget."
+      },
+      {
+        "id": "u2",
+        "text": "Recommends finding a complete kit, obtaining a lower valid quote, or negotiating a reduction of at least 70.00 SEK before treating the setup as within budget."
+      }
+    ],
+    "acceptable_outcomes": [
+      "Reject the current combination on budget grounds while acknowledging that a lower confirmed price could change the decision.",
+      "Explain that the drill alone is 700.00 SEK delivered, but the necessary quoted accessories add 370.00 SEK."
+    ]
+  }
+}

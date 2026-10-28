@@ -1,0 +1,57 @@
+{
+  "id": "rc-008",
+  "skill": "recommerce-inspect",
+  "title": "Exactly on the limit",
+  "pair": "delivered-cost",
+  "category": "cordless-drills",
+  "request": "It is 2026-10-28 at 09:15 UTC. I need this used drill delivered for flatpack assembly. My hard limit is 1,000 SEK including every mandatory charge; exactly 1,000 SEK is acceptable. I cannot collect it and own suitable bits. Does the supplied offer fit? Use only the supplied evidence.",
+  "evidence": [
+    {
+      "id": "listing-1",
+      "kind": "seller_claim",
+      "text": "Synthetic listing; Northbank is fictional. D18 kit includes the drill, A18-2 battery and C18-A charger. Item price: 899.95 SEK. Seller says it works. No measured battery runtime is supplied.",
+      "observed_at": "2026-10-28T09:00:00Z"
+    },
+    {
+      "id": "terms-1",
+      "kind": "marketplace_record",
+      "text": "Synthetic checkout quote for this buyer and this offer: delivery 49.95 SEK; mandatory buyer fee 50.10 SEK. No other mandatory charges apply. All prices are in SEK and this quote is valid through 2026-10-28T18:00:00Z.",
+      "observed_at": "2026-10-28T09:00:00Z"
+    },
+    {
+      "id": "reference-1",
+      "kind": "model_documentation",
+      "text": "Synthetic exact-model reference: D18 supports ordinary flatpack screw driving with the buyer's bits, accepts A18-2 batteries and uses C18-A charging."
+    }
+  ],
+  "rubric": {
+    "hard_failures": [
+      {
+        "id": "h1",
+        "text": "Computes a total other than 1,000.00 SEK, treats this inclusive budget as exceeded, or claims the total is strictly below 1,000 SEK."
+      },
+      {
+        "id": "h2",
+        "text": "Claims that a complete price quote also verifies battery health or the listed unit's condition."
+      }
+    ],
+    "usefulness": [
+      {
+        "id": "u1",
+        "text": "Shows that 899.95 + 49.95 + 50.10 equals exactly 1,000.00 SEK and meets the explicitly inclusive budget with no headroom."
+      },
+      {
+        "id": "u2",
+        "text": "Separates the supported price conclusion from unresolved condition and avoids asking for a delivery quote already supplied."
+      },
+      {
+        "id": "u3",
+        "text": "Makes any future price recommendation conditional on the quote still applying at commitment time."
+      }
+    ],
+    "acceptable_outcomes": [
+      "The supplied offer meets the price limit exactly, while the condition remains seller-reported.",
+      "Recommend pursuing condition checks and rechecking terms if commitment occurs after the quote expires."
+    ]
+  }
+}

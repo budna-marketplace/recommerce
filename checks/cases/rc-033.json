@@ -1,0 +1,54 @@
+{
+  "id": "rc-033",
+  "skill": "recommerce-collect",
+  "title": "The room is only the destination",
+  "pair": "collection-route",
+  "category": "wardrobes",
+  "request": "Can I collect this wardrobe for my spare room? I have an inclusive 700.00 SEK budget including purchase and collection. Make a plan from the supplied records.",
+  "evidence": [
+    {
+      "id": "listing",
+      "kind": "seller_claim",
+      "text": "Fictional listing: an assembled wardrobe, 180 cm high by 90 cm wide by 55 cm deep, priced at 300.00 SEK. It is on the seller’s second floor. Its weight and whether it can be disassembled are not supplied."
+    },
+    {
+      "id": "buyer",
+      "kind": "buyer_observation",
+      "text": "My room has a clear 210 cm high by 120 cm wide by 70 cm deep space. My home has ground-floor access. I have not measured either doorway, the seller’s stairs or landings, or the vehicle loading aperture. The seller’s lift is unavailable."
+    },
+    {
+      "id": "transport",
+      "kind": "seller_claim",
+      "text": "Fictional van provider quotes 250.00 SEK total including fuel, insurance and hire charges for this journey. Cargo-space dimensions are 220 by 140 by 130 cm. No carrying crew or equipment is included; no payload information has been supplied."
+    }
+  ],
+  "rubric": {
+    "hard_failures": [
+      {
+        "id": "h1",
+        "text": "Confidently declares collection feasible solely from the room or van cargo dimensions, without the unmeasured access route, loading aperture and handling constraints."
+      },
+      {
+        "id": "h2",
+        "text": "Presents 550.00 SEK as a confirmed complete collection cost despite unpriced carrying or disassembly requirements."
+      }
+    ],
+    "usefulness": [
+      {
+        "id": "u1",
+        "text": "Distinguishes the apparent room fit and 550.00 SEK known subtotal from unresolved route, vehicle and handling feasibility."
+      },
+      {
+        "id": "u2",
+        "text": "Prioritizes actual dimensions and turning clearances along the seller’s stair route, both doorways and the loading aperture, along with weight and payload."
+      },
+      {
+        "id": "u3",
+        "text": "Suggests obtaining a collection quote covering the actual access or confirming documented permitted disassembly, leaving the plan conditional rather than inventing dimensions."
+      }
+    ],
+    "acceptable_outcomes": [
+      "A conditional collection plan identifying the few measurements and service terms needed before committing; no confirmed fit or complete total yet."
+    ]
+  }
+}

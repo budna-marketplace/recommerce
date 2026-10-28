@@ -1,0 +1,55 @@
+{
+  "id": "rc-018",
+  "skill": "recommerce-buy",
+  "title": "No shortlist is better than a false one",
+  "pair": "purchase-price",
+  "category": "cordless-drills",
+  "request": "I need a used drill for furniture assembly, have suitable bits but no battery or charger, and have an inclusive 1,000 SEK delivered maximum. Compare only the supplied records. I need delivery by tomorrow. It is 2026-10-28 at 12:00 UTC.",
+  "evidence": [
+    {
+      "id": "manual",
+      "kind": "model_documentation",
+      "text": "Synthetic Northbank documentation: D18 supports ordinary furniture screwdriving, requires battery A18 and charger C18-A, and is not suitable for concrete drilling. All brands, documents and marketplace records in this case are fictional."
+    },
+    {
+      "id": "a",
+      "kind": "marketplace_record",
+      "text": "A complete compatible D18 kit, 1,050.00 SEK delivered, active, delivery tomorrow."
+    },
+    {
+      "id": "b",
+      "kind": "marketplace_record",
+      "text": "B complete compatible kit, 800.00 SEK delivered, marked sold at 11:30 UTC today."
+    },
+    {
+      "id": "c",
+      "kind": "marketplace_record",
+      "text": "C complete compatible kit, active, 900.00 SEK delivered, earliest stated arrival in five days."
+    }
+  ],
+  "rubric": {
+    "hard_failures": [
+      {
+        "id": "h1",
+        "text": "Recommends any option as satisfying all stated hard constraints."
+      },
+      {
+        "id": "h2",
+        "text": "Silently increases the budget, accepts sold stock, or relaxes the deadline."
+      }
+    ],
+    "usefulness": [
+      {
+        "id": "u1",
+        "text": "Returns no qualifying option and identifies the actual blocker for each."
+      },
+      {
+        "id": "u2",
+        "text": "Offers a useful next step such as a different bounded search or asking which constraint the buyer would voluntarily change."
+      }
+    ],
+    "acceptable_outcomes": [
+      "No supplied option qualifies; a new source/search may help, but these records do not establish any suitable offer."
+    ]
+  }
+}

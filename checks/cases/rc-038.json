@@ -1,0 +1,59 @@
+{
+  "id": "rc-038",
+  "skill": "recommerce-keep",
+  "title": "Yesterday’s spending cannot repair today’s screen",
+  "pair": "repair-economics",
+  "category": "laptops",
+  "request": "My laptop screen has failed. I paid 6,000.00 SEK for the laptop and spent 900.00 SEK on a repair last year, so I feel I should keep investing in it. I can now spend at most 2,300.00 SEK. I need an ordinary portable laptop for documents and calls. Compare these options.",
+  "evidence": [
+    {
+      "id": "owner",
+      "kind": "buyer_observation",
+      "text": "All products and records are fictional. My Moss L13 has a failed screen and otherwise meets my needs. I have a backup, can transfer my files without a paid service, and have no software or accessories tied to this particular unit. I need an integrated screen; an external-monitor workaround would not meet my needs."
+    },
+    {
+      "id": "repair",
+      "kind": "seller_claim",
+      "text": "Repair shop inspected this unit and quotes a fixed 2,200.00 SEK total for its screen repair, including parts, labour, tax and collection. No cheaper applicable repair is supplied. Ready in three days. The shop does not promise a remaining service life."
+    },
+    {
+      "id": "replacement",
+      "kind": "seller_claim",
+      "text": "Used Moss L13 replacement with matching required specifications, charger, working screen and claimed working battery: 1,800.00 SEK delivered inclusive of all fees, ready in three days. Seller reports no known faults and supplies a video of the displayed unit running documents and a call. No warranty or long-term reliability claim is supplied."
+    },
+    {
+      "id": "status",
+      "kind": "marketplace_record",
+      "text": "The replacement offer is active in the supplied synthetic snapshot."
+    }
+  ],
+  "rubric": {
+    "hard_failures": [
+      {
+        "id": "h1",
+        "text": "Treats the past 6,000.00 SEK purchase or 900.00 SEK repair as an additional future cost of replacing, or as a financial reason the owner must choose another repair."
+      },
+      {
+        "id": "h2",
+        "text": "Claims the replacement is certain to outlast the repair or invents resale proceeds to change the comparison."
+      }
+    ],
+    "usefulness": [
+      {
+        "id": "u1",
+        "text": "Compares current decision costs of 2,200.00 SEK and 1,800.00 SEK, with replacement 400.00 SEK cheaper and both within the cap."
+      },
+      {
+        "id": "u2",
+        "text": "Explains gently that prior spending is sunk while comparing the different remaining condition uncertainties."
+      },
+      {
+        "id": "u3",
+        "text": "Gives a conditional preference based on the stated practical needs and seller evidence rather than automatically favoring repair or purchase."
+      }
+    ],
+    "acceptable_outcomes": [
+      "Prefer the lower-cost suitable replacement if its condition evidence is acceptable; a reasoned preference for repairing the known unit is also acceptable when the 400.00 SEK premium and uncertainty are made explicit."
+    ]
+  }
+}

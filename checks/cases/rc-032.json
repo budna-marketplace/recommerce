@@ -1,0 +1,68 @@
+{
+  "id": "rc-032",
+  "skill": "recommerce-kits",
+  "title": "One replacement changes the whole kit",
+  "pair": "podcast-signal-chain",
+  "category": "podcast-equipment",
+  "request": "It is 2026-10-28 at 12:00 UTC. Update this used two-person recording kit after the interface sold. We must record both voices simultaneously and stay within an inclusive 1,000.00 SEK delivered maximum. I own the laptop and recording software. Use only these records.",
+  "evidence": [
+    {
+      "id": "manual",
+      "kind": "model_documentation",
+      "text": "All products and records are fictional. Fenwick M microphones need one XLR cable each. Fenwick Duo and Duo Plus each record two such microphones simultaneously and include their required USB cable. Fenwick Solo has only one microphone input and cannot record two M microphones simultaneously. Each interface otherwise works with the buyer’s laptop and software."
+    },
+    {
+      "id": "fixed-part",
+      "kind": "seller_claim",
+      "text": "Seller A offers two working M microphones and two suitable XLR cables as one 500.00 SEK package plus 50.00 SEK delivery, with all charges included. Handheld recording is supported; no stands or monitoring equipment are required for the buyer’s needs.",
+      "observed_at": "2026-10-28T11:30:00Z"
+    },
+    {
+      "id": "old-interface",
+      "kind": "marketplace_record",
+      "text": "The earlier plan used a Duo at 300.00 SEK plus 50.00 SEK delivery. That unit is now sold. Seller A’s microphone package remains active.",
+      "observed_at": "2026-10-28T11:45:00Z"
+    },
+    {
+      "id": "replacements",
+      "kind": "seller_claim",
+      "text": "The only supplied replacements are a working Solo at 200.00 SEK plus 50.00 SEK delivery, and a working Duo Plus at 500.00 SEK plus 50.00 SEK delivery. Both include USB cables and all mandatory fees.",
+      "observed_at": "2026-10-28T11:50:00Z"
+    },
+    {
+      "id": "replacement-status",
+      "kind": "marketplace_record",
+      "text": "Both replacement offers are active.",
+      "observed_at": "2026-10-28T11:55:00Z"
+    }
+  ],
+  "rubric": {
+    "hard_failures": [
+      {
+        "id": "h1",
+        "text": "Keeps the sold Duo as a purchasable component or preserves the original 900.00 SEK kit total after substituting a different-priced interface."
+      },
+      {
+        "id": "h2",
+        "text": "Claims the 800.00 SEK Solo setup satisfies simultaneous two-person recording, or claims the compatible 1,100.00 SEK Duo Plus setup fits the 1,000.00 SEK cap."
+      }
+    ],
+    "usefulness": [
+      {
+        "id": "u1",
+        "text": "Recalculates both replacement setups including both sellers’ delivery charges."
+      },
+      {
+        "id": "u2",
+        "text": "States that none of the supplied current combinations meets both the recording requirement and the hard budget."
+      },
+      {
+        "id": "u3",
+        "text": "Offers a focused next step such as finding a compatible interface at no more than 450.00 SEK delivered, or asking whether the buyer wants to revise the cap, without assuming consent."
+      }
+    ],
+    "acceptable_outcomes": [
+      "Wait for a compatible replacement within 450.00 SEK delivered; alternatively present the 1,100.00 SEK setup only as a clearly over-budget option."
+    ]
+  }
+}

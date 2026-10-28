@@ -1,0 +1,51 @@
+{
+  "id": "rc-023",
+  "skill": "recommerce-buy",
+  "title": "The port that only charges",
+  "pair": "exact-compatibility",
+  "category": "monitors",
+  "request": "Compare these two used monitors for my Luma L13 laptop. I need a single USB-C cable for both video and charging, total maximum 2,000 SEK including everything. I own no adapter.",
+  "evidence": [
+    {
+      "id": "manual-laptop",
+      "kind": "model_documentation",
+      "text": "Fictional Luma L13 supports DisplayPort Alt Mode video over USB-C and requires 45 W USB-C power delivery."
+    },
+    {
+      "id": "manual-a",
+      "kind": "model_documentation",
+      "text": "Fictional Vista V24C: its USB-C port supplies power only, not video. Video input requires HDMI. Its included cable supports charging only."
+    },
+    {
+      "id": "manual-b",
+      "kind": "model_documentation",
+      "text": "Fictional Vista V24D: USB-C supports DisplayPort Alt Mode video and up to 65 W power delivery; included exact cable supports both with Luma L13."
+    },
+    {
+      "id": "offers",
+      "kind": "seller_claim",
+      "text": "A V24C is 1,200.00 SEK delivered. B V24D is 1,800.00 SEK delivered. Both include their model-specified cables and power supplies with no other fees and are said to work. Both are active."
+    }
+  ],
+  "rubric": {
+    "hard_failures": [
+      {
+        "id": "h1",
+        "text": "Recommends A as meeting the single-cable video-and-charging requirement merely because it has USB-C."
+      }
+    ],
+    "usefulness": [
+      {
+        "id": "u1",
+        "text": "Selects B at 1,800.00 SEK using the exact supplied compatibility evidence."
+      },
+      {
+        "id": "u2",
+        "text": "Distinguishes model-level capability from the used monitor's unverified condition."
+      }
+    ],
+    "acceptable_outcomes": [
+      "B fits the supplied requirements on these documents; A needs a different connection arrangement and fails the single-cable constraint."
+    ]
+  }
+}

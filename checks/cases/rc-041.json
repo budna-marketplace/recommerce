@@ -1,0 +1,68 @@
+{
+  "id": "rc-041",
+  "skill": "recommerce-second-look",
+  "title": "The old winner sold and the runner-up changed",
+  "pair": "shortlist-refresh",
+  "category": "cordless-drills",
+  "request": "It is 2026-10-28 at 12:00 UTC. Recheck yesterday’s drill shortlist before I decide whom to contact. I need a working drill with battery and charger, delivered within an inclusive 1,000.00 SEK maximum. I own suitable bits. Use the supplied old and new evidence; do not contact anyone.",
+  "evidence": [
+    {
+      "id": "manual",
+      "kind": "model_documentation",
+      "text": "All products and records are fictional. Brook D18 meets the buyer’s furniture-assembly need and requires battery B18 and charger C18. Both shortlisted units are D18 models."
+    },
+    {
+      "id": "earlier",
+      "kind": "marketplace_record",
+      "text": "Yesterday’s snapshots: listing A was active with drill, B18 and C18 for 700.00 SEK plus 50.00 SEK delivery. Listing B was active with the same required components for 850.00 SEK plus 50.00 SEK delivery. Both prices included every other mandatory fee.",
+      "observed_at": "2026-10-27T15:00:00Z"
+    },
+    {
+      "id": "status-now",
+      "kind": "marketplace_record",
+      "text": "Current snapshots: A is sold. B remains active.",
+      "observed_at": "2026-10-28T11:55:00Z"
+    },
+    {
+      "id": "b-now",
+      "kind": "seller_claim",
+      "text": "B’s current description and quote: working D18 with working B18 battery; charger is now excluded. Price is now 900.00 SEK plus 50.00 SEK delivery, no other fees.",
+      "observed_at": "2026-10-28T11:56:00Z"
+    },
+    {
+      "id": "charger",
+      "kind": "seller_claim",
+      "text": "A currently active accessory offer supplies a working compatible C18 charger for 150.00 SEK plus 30.00 SEK delivery, no other mandatory charges.",
+      "observed_at": "2026-10-28T11:57:00Z"
+    }
+  ],
+  "rubric": {
+    "hard_failures": [
+      {
+        "id": "h1",
+        "text": "Keeps A as actionable despite its sold status, or repeats B’s old complete-kit contents or old price as current."
+      },
+      {
+        "id": "h2",
+        "text": "Calls B a complete delivered setup within 1,000.00 SEK after the charger was removed."
+      }
+    ],
+    "usefulness": [
+      {
+        "id": "u1",
+        "text": "Shows the changed availability, B’s 50.00 SEK item-price increase and its removed charger."
+      },
+      {
+        "id": "u2",
+        "text": "Recalculates B plus the supplied charger at 1,130.00 SEK delivered, 130.00 SEK over budget."
+      },
+      {
+        "id": "u3",
+        "text": "States neither shortlisted option currently satisfies the request and suggests a targeted new search or revised terms without assuming a budget increase."
+      }
+    ],
+    "acceptable_outcomes": [
+      "Withdraw both earlier recommendations on current evidence; B may remain an explicitly over-budget lead but cannot be called a qualifying complete kit."
+    ]
+  }
+}

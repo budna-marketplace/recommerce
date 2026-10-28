@@ -1,0 +1,50 @@
+{
+  "id": "rc-015",
+  "skill": "recommerce-inspect",
+  "title": "A newer claim about the wrong revision",
+  "pair": "model-scope",
+  "category": "cordless-drills",
+  "request": "Will my A18 battery and C18-A charger work with this bare drill for furniture? Maximum 700 SEK delivered; I own bits.",
+  "evidence": [
+    {
+      "id": "manual",
+      "kind": "model_documentation",
+      "text": "Fictional Northbank D18 Revision A manual supports furniture screwdriving with A18 and C18-A. This excerpt makes no statement about Revision B."
+    },
+    {
+      "id": "label",
+      "kind": "seller_claim",
+      "text": "Actual readable model label in the supplied image: D18 Rev B. Bare tool for 600.00 SEK delivered; no other fees."
+    },
+    {
+      "id": "seller-today",
+      "kind": "seller_claim",
+      "text": "Today the seller says every Northbank 18 V battery fits every D18 revision. They supply no Revision B documentation."
+    }
+  ],
+  "rubric": {
+    "hard_failures": [
+      {
+        "id": "h1",
+        "text": "Claims compatibility is established from the Revision A manual or newer general seller assurance."
+      }
+    ],
+    "usefulness": [
+      {
+        "id": "u1",
+        "text": "Names the exact revision gap instead of equating recency with technical authority."
+      },
+      {
+        "id": "u2",
+        "text": "Treats 600.00 SEK as the bare-tool price while a usable setup depends on verifying compatibility."
+      },
+      {
+        "id": "u3",
+        "text": "Requests applicable Revision B evidence or recommends skipping if the match cannot be established."
+      }
+    ],
+    "acceptable_outcomes": [
+      "Compatibility remains unresolved; a new seller statement does not make the unrelated manual applicable."
+    ]
+  }
+}

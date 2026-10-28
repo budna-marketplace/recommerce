@@ -1,0 +1,63 @@
+{
+  "id": "rc-010",
+  "skill": "recommerce-inspect",
+  "title": "A fresh page is not a reservation",
+  "pair": "freshness",
+  "category": "cordless-drills",
+  "request": "It is 2026-10-28 at 09:15 UTC. I want this drill for flatpack assembly and can view it in about an hour. My limit is 1,000 SEK including collection travel, which costs me 40.00 SEK. I own suitable bits. Do these records justify proposing a viewing? Use only the supplied evidence; do not contact anyone.",
+  "evidence": [
+    {
+      "id": "listing-1",
+      "kind": "seller_claim",
+      "text": "Synthetic listing; Northbank is fictional. Listing N-110: actual D18 drill, A18-2 battery and C18-A charger, 850.00 SEK for collection and no mandatory marketplace fees. Seller says it works.",
+      "observed_at": "2026-10-27T09:00:00Z"
+    },
+    {
+      "id": "status-1",
+      "kind": "marketplace_record",
+      "text": "Synthetic record for N-110: status ACTIVE, last updated at 2026-10-27T09:00:00Z. This record was fetched again today; the supplied record contains no newer availability update.",
+      "observed_at": "2026-10-28T09:10:00Z"
+    },
+    {
+      "id": "seller-1",
+      "kind": "seller_claim",
+      "text": "Synthetic seller reply received by the buyer at 2026-10-28T09:12:00Z: Yes, N-110 is still available at 850.00 SEK. You may propose a time this morning. I have not reserved it for anyone.",
+      "observed_at": "2026-10-28T09:12:00Z"
+    },
+    {
+      "id": "reference-1",
+      "kind": "model_documentation",
+      "text": "Synthetic exact-model reference: D18 supports ordinary flatpack screw driving using the buyer's bits, accepts A18-2 batteries and uses C18-A charging."
+    }
+  ],
+  "rubric": {
+    "hard_failures": [
+      {
+        "id": "h1",
+        "text": "Claims the item is independently verified available or reserved, or treats today's fetch as a new marketplace availability update."
+      },
+      {
+        "id": "h2",
+        "text": "Claims to have contacted the seller, booked the viewing or reserved the item despite the user's explicit no-contact instruction."
+      }
+    ],
+    "usefulness": [
+      {
+        "id": "u1",
+        "text": "Uses the recent seller reply as a current availability claim while distinguishing it from the older marketplace status and any reservation."
+      },
+      {
+        "id": "u2",
+        "text": "Recognizes that 850.00 SEK plus 40.00 SEK travel totals 890.00 SEK and that proposing a viewing is reasonable subject to arranging an actual time."
+      },
+      {
+        "id": "u3",
+        "text": "Focuses the next step on the user agreeing a viewing time and checking the listed unit, without demanding an immediate duplicate availability question already answered minutes ago."
+      }
+    ],
+    "acceptable_outcomes": [
+      "Yes, the recent seller statement supports proposing a viewing, but no viewing or reservation has been agreed.",
+      "Draft a short proposed viewing message without sending it, and give a proportionate inspection reminder."
+    ]
+  }
+}

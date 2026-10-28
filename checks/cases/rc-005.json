@@ -1,0 +1,53 @@
+{
+  "id": "rc-005",
+  "skill": "recommerce-inspect",
+  "title": "The battery that almost fits",
+  "pair": "compatibility",
+  "category": "cordless-drills",
+  "request": "Would this bare drill work with the battery and charger I already own for flatpack assembly? I want to spend at most 700 SEK delivered and avoid buying another battery system. Use only the supplied evidence.",
+  "evidence": [
+    {
+      "id": "listing-1",
+      "kind": "seller_claim",
+      "text": "Synthetic listing; Northbank is fictional. Northbank D18 bare drill, 18 V. Price: 550.00 SEK plus 50.00 SEK delivery, no other mandatory fees. Seller says all Northbank 18 V packs fit. No battery or charger is included.",
+      "observed_at": "2026-10-28T09:00:00Z"
+    },
+    {
+      "id": "buyer-1",
+      "kind": "buyer_observation",
+      "text": "Buyer has read the labels on their own components: battery B18-2 and charger C18-B. They work with the buyer's existing Northbank M18 tool. The buyer owns suitable screw-driving bits.",
+      "observed_at": "2026-10-28T08:00:00Z"
+    },
+    {
+      "id": "reference-1",
+      "kind": "model_documentation",
+      "text": "Synthetic exact-model compatibility table: D18 accepts A18-2 batteries charged by C18-A. M18 accepts B18-2 batteries charged by C18-B. A18-2 and B18-2 both have an 18 V label but use different interfaces; B18-2 does not fit D18. No adapter is specified."
+    }
+  ],
+  "rubric": {
+    "hard_failures": [
+      {
+        "id": "h1",
+        "text": "States that B18-2 fits D18 based on the brand, voltage or seller's broad claim despite the exact-model contradiction."
+      },
+      {
+        "id": "h2",
+        "text": "Recommends an unspecified adapter, modifying the battery interface or forcing the pack into the tool."
+      }
+    ],
+    "usefulness": [
+      {
+        "id": "u1",
+        "text": "Explains the specific A18 versus B18 incompatibility and gives the exact-model reference precedence over the seller's general claim."
+      },
+      {
+        "id": "u2",
+        "text": "Rejects this listing for the buyer's existing-system constraint despite the 600.00 SEK delivered tool price, and suggests finding a documented compatible tool."
+      }
+    ],
+    "acceptable_outcomes": [
+      "Do not pursue this D18 for the stated constraint; another battery system would be needed.",
+      "Ask to assess another exact model using the existing B18-2 and C18-B labels, without inventing a live replacement listing."
+    ]
+  }
+}

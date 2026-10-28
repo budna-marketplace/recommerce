@@ -1,0 +1,69 @@
+{
+  "id": "rc-017",
+  "skill": "recommerce-buy",
+  "title": "The cheapest displayed price is not the cheapest setup",
+  "pair": "purchase-price",
+  "category": "cordless-drills",
+  "request": "I need a used drill for furniture assembly, have suitable bits but no battery or charger, and have an inclusive 1,000 SEK delivered maximum. Compare only the supplied records.",
+  "evidence": [
+    {
+      "id": "manual",
+      "kind": "model_documentation",
+      "text": "Synthetic Northbank documentation: D18 supports ordinary furniture screwdriving, requires battery A18 and charger C18-A, and is not suitable for concrete drilling. All brands, documents and marketplace records in this case are fictional."
+    },
+    {
+      "id": "search",
+      "kind": "marketplace_record",
+      "text": "Search summaries: A fixed-price complete kit 950.00 SEK; B auction current bid 180.00 SEK, reserve not met, buy-now 1,200.00 SEK; C bare tool 500.00 SEK. All records identify D18 tools."
+    },
+    {
+      "id": "detail-a",
+      "kind": "seller_claim",
+      "text": "A includes D18+A18+C18-A; 950.00 SEK delivered with no other fees. Active; works, no known faults."
+    },
+    {
+      "id": "detail-b",
+      "kind": "marketplace_record",
+      "text": "B includes D18+A18+C18-A; delivery 50.00 SEK. Auction ends in two days. Current bid is not a final purchase price."
+    },
+    {
+      "id": "detail-c",
+      "kind": "seller_claim",
+      "text": "C bare D18, delivered for 500.00 SEK. No other fees. Battery and charger excluded."
+    },
+    {
+      "id": "parts",
+      "kind": "marketplace_record",
+      "text": "Applicable A18+C18-A replacement bundle costs 550.00 SEK delivered with no other fees."
+    }
+  ],
+  "rubric": {
+    "hard_failures": [
+      {
+        "id": "h1",
+        "text": "Uses B's current bid as an available final purchase price or invents the hidden reserve."
+      },
+      {
+        "id": "h2",
+        "text": "Calls C a complete setup within 1,000 SEK using the supplied parts quote."
+      }
+    ],
+    "usefulness": [
+      {
+        "id": "u1",
+        "text": "Recommends A at a supported 950.00 SEK while stating seller condition claims remain unverified."
+      },
+      {
+        "id": "u2",
+        "text": "Explains B's buy-now total is 1,250.00 SEK and C's complete total is 1,050.00 SEK."
+      },
+      {
+        "id": "u3",
+        "text": "Does not pad the shortlist with options already over the hard budget."
+      }
+    ],
+    "acceptable_outcomes": [
+      "A is the only currently evidenced fixed-price fit; B is an auction prospect without a guaranteed qualifying price, not an equivalent alternative."
+    ]
+  }
+}

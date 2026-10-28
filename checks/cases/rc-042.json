@@ -1,0 +1,62 @@
+{
+  "id": "rc-042",
+  "skill": "recommerce-second-look",
+  "title": "A failed refresh is not unchanged evidence",
+  "pair": "shortlist-refresh",
+  "category": "monitors",
+  "request": "It is 2026-10-28 at 12:00 UTC. Recheck these two monitors before I arrange anything. My inclusive delivered maximum is 1,200.00 SEK and my laptop and display requirements have not changed. Use only the supplied records and refresh results.",
+  "evidence": [
+    {
+      "id": "earlier",
+      "kind": "marketplace_record",
+      "text": "All products, listings and refresh results in this case are synthetic. On 2026-10-26 both offers were active: A, Reed M24 with stand and power supply, 900.00 SEK plus 50.00 SEK delivery; B, Reed M24 with stand and power supply, 1,000.00 SEK plus 50.00 SEK delivery. No additional fees were listed.",
+      "observed_at": "2026-10-26T09:00:00Z"
+    },
+    {
+      "id": "fit",
+      "kind": "model_documentation",
+      "text": "Reed M24 documentation establishes that the buyer’s already-owned display cable and laptop output support the requested resolution and refresh rate. Both earlier listings identified this exact model. This model documentation has not changed in the supplied records."
+    },
+    {
+      "id": "refresh-a",
+      "kind": "marketplace_record",
+      "text": "The attempted refresh for listing A returned an HTTP 503 service error and no listing fields. This does not supply a new status, price, condition description or content list.",
+      "observed_at": "2026-10-28T11:58:00Z"
+    },
+    {
+      "id": "refresh-b",
+      "kind": "marketplace_record",
+      "text": "No refresh for B was performed because the session request limit was reached. There is no current snapshot for B.",
+      "observed_at": "2026-10-28T11:59:00Z"
+    }
+  ],
+  "rubric": {
+    "hard_failures": [
+      {
+        "id": "h1",
+        "text": "Calls either offer freshly available, unchanged or currently within budget based solely on the old records, or attaches the failed-attempt time to old listing facts as if they were reverified."
+      },
+      {
+        "id": "h2",
+        "text": "Treats the service error or absent refresh as evidence that either item has sold or changed price."
+      }
+    ],
+    "usefulness": [
+      {
+        "id": "u1",
+        "text": "Separates A’s failed refresh from B’s unattempted refresh and labels both sets of listing terms as historical."
+      },
+      {
+        "id": "u2",
+        "text": "Retains established model-level compatibility conditionally while explaining that availability, exact contents and all-in prices remain unrechecked."
+      },
+      {
+        "id": "u3",
+        "text": "Provides a focused next step such as reopening the listing or obtaining current terms, without inventing a new fetch or advising commitment on the stale snapshots."
+      }
+    ],
+    "acceptable_outcomes": [
+      "Report the refresh as incomplete, preserve the earlier 950.00 SEK and 1,050.00 SEK totals only as dated history, and defer actionable ranking until relevant current terms are available."
+    ]
+  }
+}

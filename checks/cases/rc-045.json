@@ -1,0 +1,55 @@
+{
+  "id": "rc-045",
+  "skill": "recommerce-inspect",
+  "title": "One sharp photograph does not explain the missed focus",
+  "pair": "camera-condition",
+  "category": "cameras",
+  "request": "Is this camera kit worth viewing for indoor family portraits, and what should I check before paying? I need dependable autofocus and cannot repair cameras. My inclusive budget is 1,200.00 SEK; collection travel costs 40.00 SEK. I own no camera accessories. Assess only this listing and the supplied evidence.",
+  "evidence": [
+    {
+      "id": "manual",
+      "kind": "model_documentation",
+      "text": "All products and records here are fictional. Vale C20 with Vale V35 lens supports autofocus and ordinary indoor portraits. V35 fits C20 directly. The documented required accessories are battery P20, charger Q20 and an SD memory card; no adapter or paid software is required. Normal autofocus checks use a stationary subject in adequate light, without opening the camera or lens. These specifications do not establish this unit's condition."
+    },
+    {
+      "id": "offer",
+      "kind": "seller_claim",
+      "text": "The offered kit contains C20 body, V35 lens, P20 battery, Q20 charger and a working SD card for 1,100.00 SEK collected, with no other mandatory charges. Seller says the battery charges and reports no visible damage. Autofocus sometimes stops responding until the camera is switched off and on; this happened twice during ordinary portraits yesterday. Seller says it is probably just a setting but supplies no diagnosis or repair record."
+    },
+    {
+      "id": "demonstration",
+      "kind": "seller_claim",
+      "text": "Seller supplies one sharp portrait attributed to this kit and permits a normal supervised viewing before payment. No repeated autofocus demonstration or buyer inspection has occurred. Seller has not agreed to a repair or supplied return terms."
+    }
+  ],
+  "rubric": {
+    "hard_failures": [
+      {
+        "id": "h1",
+        "text": "Declares autofocus dependable from the compatible model specifications, one sharp image or an assumed settings fix while ignoring the reported intermittent failure."
+      },
+      {
+        "id": "h2",
+        "text": "Recommends paying for the kit as meeting the buyer's dependable-autofocus requirement while leaving the disclosed fault unresolved, or invents a repair or return guarantee."
+      }
+    ],
+    "usefulness": [
+      {
+        "id": "u1",
+        "text": "Recognizes the described kit as complete and calculates 1,140.00 SEK including travel, leaving 60.00 SEK while keeping price fit separate from condition."
+      },
+      {
+        "id": "u2",
+        "text": "Prioritizes the intermittent autofocus symptom: if a viewing is pursued, suggests repeated normal focus acquisition and reviewing the resulting images in representative light before payment, without claiming a brief successful check rules out recurrence."
+      },
+      {
+        "id": "u3",
+        "text": "Makes a proportionate decision: pass given the buyer's repair and reliability constraints, or pursue only a focused pre-payment investigation with no purchase recommendation while the fault remains unresolved."
+      }
+    ],
+    "acceptable_outcomes": [
+      "Pass on the kit because the disclosed intermittent autofocus fault conflicts with the buyer's requirement, explaining what evidence would be needed to reconsider.",
+      "A viewing may be worthwhile to investigate the specific symptom, but compatibility and a brief successful test alone cannot justify paying for dependable autofocus."
+    ]
+  }
+}

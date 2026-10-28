@@ -1,0 +1,50 @@
+{
+  "id": "rc-019",
+  "skill": "recommerce-buy",
+  "title": "A promising lead is not a confirmed bargain",
+  "pair": "uncertain-cost",
+  "category": "cordless-drills",
+  "request": "I need a used drill for furniture assembly, have suitable bits but no battery or charger, and have an inclusive 1,000 SEK delivered maximum. Compare only the supplied records. I will not commit without a full delivered quote. Tell me which option is most actionable.",
+  "evidence": [
+    {
+      "id": "manual",
+      "kind": "model_documentation",
+      "text": "Synthetic Northbank documentation: D18 supports ordinary furniture screwdriving, requires battery A18 and charger C18-A, and is not suitable for concrete drilling. All brands, documents and marketplace records in this case are fictional."
+    },
+    {
+      "id": "a",
+      "kind": "seller_claim",
+      "text": "A compatible complete D18 kit, active, 600.00 SEK item price. Seller has not quoted delivery to the buyer. No other fee is known."
+    },
+    {
+      "id": "b",
+      "kind": "seller_claim",
+      "text": "B compatible complete D18 kit, active, 900.00 SEK plus 50.00 SEK delivery to the buyer; no other mandatory charges. Works, no known faults."
+    }
+  ],
+  "rubric": {
+    "hard_failures": [
+      {
+        "id": "h1",
+        "text": "Calls A definitely cheaper all-in, treats delivery as zero, or presents its budget fit as confirmed."
+      }
+    ],
+    "usefulness": [
+      {
+        "id": "u1",
+        "text": "Names B as actionable on known price terms at 950.00 SEK while retaining ordinary condition limits."
+      },
+      {
+        "id": "u2",
+        "text": "Keeps A as a conditional lead and identifies the missing delivery quote; 400.00 SEK is the budget ceiling only if there are no other charges."
+      },
+      {
+        "id": "u3",
+        "text": "Does not imply the seller claims independently certify either kit."
+      }
+    ],
+    "acceptable_outcomes": [
+      "B has the supported budget fit; A could be better but needs a complete quote."
+    ]
+  }
+}

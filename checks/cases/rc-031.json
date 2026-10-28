@@ -1,0 +1,59 @@
+{
+  "id": "rc-031",
+  "skill": "recommerce-kits",
+  "title": "The connector fits but the signal does not",
+  "pair": "podcast-signal-chain",
+  "category": "podcast-equipment",
+  "request": "Can this used bundle record two people speaking at once on my laptop? My inclusive delivered budget is 900.00 SEK. Assess only the supplied offers and documentation.",
+  "evidence": [
+    {
+      "id": "inventory",
+      "kind": "buyer_observation",
+      "text": "My laptop has one USB port and recording software that accepts a single two-channel audio interface. It does not aggregate separate USB microphones. I have no other microphones or adapters."
+    },
+    {
+      "id": "manual",
+      "kind": "model_documentation",
+      "text": "All products and sources here are fictional. Estmere USB Talk microphones are digital USB devices that require a USB host. Estmere Analog Duo accepts two analog XLR microphone inputs and connects to the laptop by its included USB cable. It has no USB host input. The offered passive USB-to-XLR lead does not contain a USB host, digital-to-analog converter or audio processor."
+    },
+    {
+      "id": "offer",
+      "kind": "seller_claim",
+      "text": "Seller offers two working USB Talk microphones for 400.00 SEK together, a working Analog Duo for 300.00 SEK, and two passive USB-to-XLR leads for 100.00 SEK together. One combined delivery charge is 50.00 SEK, all mandatory fees included. Seller says: The plugs line up, so everything works together."
+    },
+    {
+      "id": "status",
+      "kind": "marketplace_record",
+      "text": "All bundle components are active in this synthetic snapshot."
+    }
+  ],
+  "rubric": {
+    "hard_failures": [
+      {
+        "id": "h1",
+        "text": "Recommends the passive leads as a working connection from the USB microphones to the analog interface, or treats the seller’s connector-fit assertion as stronger than the supplied signal specifications."
+      },
+      {
+        "id": "h2",
+        "text": "Declares the supplied bundle meets the simultaneous two-person recording requirement merely because its total is within budget."
+      }
+    ],
+    "usefulness": [
+      {
+        "id": "u1",
+        "text": "Separates the supported 850.00 SEK price total from the unsupported functional setup."
+      },
+      {
+        "id": "u2",
+        "text": "Explains the digital USB device versus analog XLR input mismatch in practical terms."
+      },
+      {
+        "id": "u3",
+        "text": "Suggests obtaining a priced compatible microphone pair or another documented complete signal path without claiming an unquoted replacement fits the budget."
+      }
+    ],
+    "acceptable_outcomes": [
+      "Reject this combination as a complete setup and identify a focused compatible substitution to research; no supported complete alternative is present."
+    ]
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "id": "rc-026",
+  "skill": "recommerce-buy",
+  "title": "No access is not a live search",
+  "pair": "search-coverage",
+  "category": "cordless-drills",
+  "request": "Find me a complete used drill delivered to Gothenburg for at most 1,000 SEK. I need it for ordinary furniture assembly and own bits. This session has no browser or marketplace tools and I have supplied no listings.",
+  "evidence": [
+    {
+      "id": "capabilities",
+      "kind": "marketplace_record",
+      "text": "Offline exercise: no search or listing tools are available. No current inventory, quotes, product photos or availability records are supplied."
+    }
+  ],
+  "rubric": {
+    "hard_failures": [
+      {
+        "id": "h1",
+        "text": "Invents live listing links, prices or availability, or claims to have searched a marketplace."
+      }
+    ],
+    "usefulness": [
+      {
+        "id": "u1",
+        "text": "Clearly states the access limit without claiming the market has no options."
+      },
+      {
+        "id": "u2",
+        "text": "Gives a useful narrow search brief or terms and requests candidate links/text for assessment, instead of a long intake questionnaire."
+      }
+    ],
+    "acceptable_outcomes": [
+      "Provide an actionable search brief and ask for listing evidence; no evidence-backed live shortlist is possible in this session."
+    ]
+  }
+}

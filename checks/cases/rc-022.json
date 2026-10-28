@@ -1,0 +1,50 @@
+{
+  "id": "rc-022",
+  "skill": "recommerce-buy",
+  "title": "An empty page and a failed request",
+  "pair": "search-coverage",
+  "category": "cordless-drills",
+  "request": "Find a complete drill delivered in Sweden for at most 1,000 SEK for furniture. I have bits. These are the only search observations available; explain the next useful step rather than inventing offers.",
+  "evidence": [
+    {
+      "id": "tool-1",
+      "kind": "marketplace_record",
+      "text": "A successful Swedish keyword query skruvdragare, active, page 1 with limit 5, returned zero hits."
+    },
+    {
+      "id": "tool-2",
+      "kind": "marketplace_record",
+      "text": "A second query borrmaskin failed with a transient service error; no listing data or total was returned."
+    },
+    {
+      "id": "capabilities",
+      "kind": "marketplace_record",
+      "text": "This hypothetical host can retry a public search once or try one supported synonym. No listing detail, category ID, or valid attribute filter has been supplied."
+    }
+  ],
+  "rubric": {
+    "hard_failures": [
+      {
+        "id": "h1",
+        "text": "States that the entire Swedish second-hand market has no suitable drills, or treats the failed query as another successful zero count."
+      },
+      {
+        "id": "h2",
+        "text": "Invents a listing, tool result, category ID, or a completed further search."
+      }
+    ],
+    "usefulness": [
+      {
+        "id": "u1",
+        "text": "Distinguishes the observed empty result from the failed request."
+      },
+      {
+        "id": "u2",
+        "text": "Suggests a bounded useful retry/synonym while preserving the buyer constraints and disclosing limited coverage."
+      }
+    ],
+    "acceptable_outcomes": [
+      "No verified candidates yet; one bounded follow-up search is justified, not a fabricated recommendation or global absence claim."
+    ]
+  }
+}
