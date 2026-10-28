@@ -1,6 +1,6 @@
 # Recommerce by Budna
 
-**Buy used with fewer unknowns.**
+**Agent skills for better second-hand decisions.**
 
 Portable agent skills for researching second-hand purchases. Recommerce covers discovery, complete setups, inspection, collection planning, repair-versus-replacement decisions, and reassessment before commitment.
 
