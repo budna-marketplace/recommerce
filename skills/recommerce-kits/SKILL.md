@@ -1,6 +1,7 @@
 ---
 name: recommerce-kits
 description: Assemble a complete second-hand setup for an outcome such as recording a podcast, starting photography, or equipping a workshop. Use when several components must work together within one budget, including gear the buyer already owns. Produces a compatible bill of materials, alternatives, and acquisition dependencies; does not purchase or reserve items.
+license: MIT
 ---
 
 # Recommerce Kits

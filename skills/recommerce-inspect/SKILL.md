@@ -1,6 +1,7 @@
 ---
 name: recommerce-inspect
 description: Assess a supplied second-hand listing against the buyer's needs and prepare a concise inspection card before purchase or collection. Use for listing-specific suitability, missing essentials, cost, and inspection questions; does not perform marketplace-wide discovery or transact.
+license: MIT
 ---
 
 # Recommerce Inspect

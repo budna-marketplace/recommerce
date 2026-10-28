@@ -28,7 +28,7 @@ Choose the workflow that owns the decision:
 
 Start with `SKILL.md`. Add the smallest instruction that addresses the demonstrated failure. Keep the entrypoint focused; put substantial category-specific guidance in a reference inside that skill's folder, linked from the entrypoint.
 
-Each skill must remain independently installable. Do not require sibling skills, repository-level checks, local machine paths, credentials, or private endpoints. Reuse an existing workflow when it fits rather than introducing another skill for a minor variation.
+Each skill must remain independently installable. Preserve the complete repository `LICENSE` in every skill folder so its copyright and permission notices remain in standalone installations. Do not require sibling skills, repository-level checks, local machine paths, credentials, or private endpoints. Reuse an existing workflow when it fits rather than introducing another skill for a minor variation.
 
 For technical or category advice, cite applicable primary documentation. Match the actual model and variant; do not generalize an example into a universal rule. Keep seller claims, specifications, and human observations distinct. Ordinary uncertainty should not automatically block a reasonable decision, and a short checklist must not imply certification.
 

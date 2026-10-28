@@ -1,6 +1,7 @@
 ---
 name: recommerce-keep
 description: Compare keeping, repairing, or upgrading an owned item with replacing it second-hand. Use when deciding whether an existing item still meets the owner's needs or whether a repair is worthwhile. Produces a conditional recommendation grounded in costs, suitability, and uncertainty; does not diagnose faults or arrange repairs or purchases.
+license: MIT
 ---
 
 # Recommerce Keep

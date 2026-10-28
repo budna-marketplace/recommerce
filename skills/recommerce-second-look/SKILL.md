@@ -1,6 +1,7 @@
 ---
 name: recommerce-second-look
 description: Reassess an existing second-hand shortlist or planned purchase against newer evidence before commitment. Use to check changed availability, complete costs, contents, compatibility, logistics, and buyer requirements. Produces a concise account of what changed and an updated recommendation; does not reserve, contact sellers, or transact.
+license: MIT
 ---
 
 # Recommerce Second Look

@@ -47,6 +47,7 @@ function validateSkill(skill: string): void {
 }
 
 function validatePackages(root: string, output: string): void {
+  const license = readFileSync(join(root, 'LICENSE'));
   const names = readdirSync(join(root, 'skills'), { withFileTypes: true })
     .filter(entry => entry.isDirectory() || entry.isSymbolicLink()).map(entry => entry.name).sort();
   assert.deepEqual(names, NAMES, 'skill folders must match supported workflows');
@@ -58,6 +59,8 @@ function validatePackages(root: string, output: string): void {
     const installed = join(output, item.id, 'skills');
     assert.deepEqual(readdirSync(installed), [item.skill], 'export must contain only the selected skill');
     validateSkill(join(installed, item.skill));
+    assert.deepEqual(readFileSync(join(installed, item.skill, 'LICENSE')), license,
+      `${item.skill}: installed LICENSE must match the repository LICENSE`);
   }
 }
 
@@ -70,14 +73,26 @@ function fixture(work: (root: string, output: string) => void): void {
   scratch(directory => {
     const root = join(directory, 'repo');
     cpSync(join(ROOT, 'skills'), join(root, 'skills'), { recursive: true });
+    cpSync(join(ROOT, 'LICENSE'), join(root, 'LICENSE'));
     cpSync(join(ROOT, 'checks', 'cases'), join(root, 'checks', 'cases'), { recursive: true });
     work(root, join(directory, 'export'));
   });
 }
 
-test('real skills have valid metadata, case coverage, and self-contained installations', () => scratch(directory => {
+test('real skills have valid metadata, case coverage, and self-contained installations with license notices', () => scratch(directory => {
   validatePackages(ROOT, join(directory, 'export'));
 }));
+
+test('package validation rejects missing or changed bundled license notices', () => {
+  for (const content of [null, 'MIT License\n']) {
+    fixture((root, output) => {
+      const license = join(root, 'skills', 'recommerce-buy', 'LICENSE');
+      if (content === null) rmSync(license);
+      else writeFileSync(license, content);
+      assert.throws(() => validatePackages(root, output), /LICENSE/);
+    });
+  }
+});
 
 test('package validation rejects missing skills, entrypoints, and case coverage', () => {
   for (const missing of ['skills', 'skills/recommerce-buy', 'skills/recommerce-buy/SKILL.md']) {
