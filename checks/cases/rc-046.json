@@ -1,0 +1,55 @@
+{
+  "id": "rc-046",
+  "skill": "recommerce-inspect",
+  "title": "The office screen has already done the relevant work",
+  "pair": "monitor-condition",
+  "category": "monitors",
+  "request": "I am at the viewing. Should I buy this monitor for ordinary documents and video calls at 1920 by 1080 and 60 Hz? My inclusive cap is 800.00 SEK. I accept ordinary used-item risk and want a short decision, not another complete test session. Use only these records.",
+  "evidence": [
+    {
+      "id": "manual",
+      "kind": "model_documentation",
+      "text": "All products and records are fictional. Mere M24 supports 1920 by 1080 at 60 Hz through HDMI. The buyer's laptop and already-owned HDMI cable are documented compatible at that setting. The original P24 power supply and supplied stand complete this configuration; no adapter, dock or subscription is required. The buyer uses the laptop's own camera, microphone and speakers for calls."
+    },
+    {
+      "id": "offer",
+      "kind": "seller_claim",
+      "text": "This M24 monitor, original P24 power supply and stand cost 750.00 SEK collected, with no other fees. Seller reports no known faults and minor cosmetic scuffs on the stand. The item is available at this viewing."
+    },
+    {
+      "id": "observation",
+      "kind": "buyer_observation",
+      "text": "I checked the exact monitor and supply labels. Using my laptop and HDMI cable, I ran documents and a video call at 1920 by 1080 and 60 Hz for forty-five minutes. The image stayed stable; light and dark test backgrounds showed no visible faulty pixels or patches. The stand is stable, and I saw only superficial scuffs on it, with no apparent damage to the screen, power supply or cable. Travel cost nothing, and taking it home adds no cost. I have not tested every input or measured colour accuracy."
+    }
+  ],
+  "rubric": {
+    "hard_failures": [
+      {
+        "id": "h1",
+        "text": "Treats the cosmetic stand scuffs or unmeasured professional colour accuracy as a reason this otherwise supported monitor cannot meet ordinary office use, or invents a mandatory paid accessory."
+      },
+      {
+        "id": "h2",
+        "text": "Claims the observation certifies every input, proves the absence of all latent defects or guarantees future reliability."
+      }
+    ],
+    "usefulness": [
+      {
+        "id": "u1",
+        "text": "Gives a direct recommendation that purchase is reasonable on the supplied evidence at 750.00 SEK, leaving 50.00 SEK within the cap."
+      },
+      {
+        "id": "u2",
+        "text": "Credits the exact-model match and the buyer's completed test of the intended connection and workload, without demanding the same checks again or testing unused inputs as a purchase condition."
+      },
+      {
+        "id": "u3",
+        "text": "Keeps the decision concise and distinguishes the relevant observed performance from ordinary remaining used-unit uncertainty."
+      }
+    ],
+    "acceptable_outcomes": [
+      "Reasonable to proceed at 750.00 SEK given the completed relevant checks and the buyer's stated risk acceptance; no new material blocker is established.",
+      "A short inspection card confirming fit, contents, price and the limits of the observation is sufficient; further optional checks must not become invented requirements."
+    ]
+  }
+}

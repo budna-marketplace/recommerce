@@ -1,6 +1,6 @@
 # Working on Recommerce
 
-This is a private review draft of Recommerce by Budna. Keep changes within the requested scope. Do not publish the repository, create releases, or merge the initial review without the owner's direction.
+This is Recommerce by Budna. Keep changes within the requested scope. Do not change repository visibility, create releases, or merge pull requests without the owner's direction.
 
 - Keep each `skills/<name>/` folder independently installable. Runtime references must remain inside that skill folder. Checks and contributor documentation are development resources.
 - Preserve the difference between seller claims, model documentation, human observations, and marketplace status. Unknown costs cannot establish a total within budget.

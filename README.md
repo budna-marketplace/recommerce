@@ -74,8 +74,6 @@ Add `--global` to make the skill available across projects. No manual clone or r
 
 For other Agent Skills-compatible hosts with GitHub import, select the relevant folder in [skills/](https://github.com/budna-marketplace/recommerce/tree/main/skills). Import the complete folder, including its references. Hosts without skill support cannot install these as persistent skills.
 
-**Review status:** these remote instructions become usable once the skill folders are pushed. The repository is currently private, so installation also requires GitHub access.
-
 ## Design principles and scope
 
 - **Claims retain their sources.** Model specifications do not certify a particular used unit; ratings and identity badges do not establish condition.
@@ -83,7 +81,7 @@ For other Agent Skills-compatible hosts with GitHub import, select the relevant 
 - **Respect the buyer's constraints.** Do not silently relax requirements, invent availability, or fill a shortlist with unsuitable options.
 - **Keep assessment separate from transactions.** The skills do not contact sellers, reserve items, bid, or purchase. They do not certify condition, authenticity, or future availability.
 
-**Private review draft.** These are general decision workflows; examples rely on supplied or verified specifications and quotes. Inspect's detailed category guidance currently focuses on cordless drills. No workflow certifies physical condition, safe handling, repair success, or future availability.
+These are general decision workflows; examples rely on supplied or verified specifications and quotes. No workflow certifies physical condition, safe handling, repair success, or future availability.
 
 [Recommerce Checks](checks/README.md) contains synthetic regression cases and an offline evaluation workflow. These support development, not a claim of general reliability. See [CONTRIBUTING.md](CONTRIBUTING.md) for repository structure, development checks, and how to contribute cases or improvements.
 

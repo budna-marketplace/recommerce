@@ -2,17 +2,19 @@
   "name": "@budna-marketplace/recommerce",
   "private": true,
   "type": "module",
-  "description": "Portable second-hand assessment skills and offline regression checks.",
+  "description": "Agent skills for better second-hand decisions.",
   "license": "MIT",
   "engines": {
     "node": ">=24.12.0"
   },
   "scripts": {
-    "check": "tsc --noEmit && node checks/check.ts validate && node --test checks/check.test.ts",
-    "test": "node --test checks/check.test.ts"
+    "check": "tsc --noEmit && node checks/check.ts validate && npm test",
+    "test": "node --test checks/*.test.ts"
   },
   "devDependencies": {
     "@types/node": "24.19.2",
-    "typescript": "7.0.2"
+    "marked": "18.1.2",
+    "typescript": "7.0.2",
+    "yaml": "2.9.1"
   }
 }

@@ -1,6 +1,6 @@
 # Recommerce Checks
 
-A small regression pack for six second-hand decision workflows: 44 synthetic cases—17 for Inspect, 11 for Buy, and four each for Kits, Collect, Keep, and Second Look. They are contrast cases, not single-variable experiments or evidence of broad shopping competence.
+A small regression pack for six second-hand decision workflows: 47 synthetic cases—20 for Inspect, 11 for Buy, and four each for Kits, Collect, Keep, and Second Look. They are contrast cases, not single-variable experiments or evidence of broad shopping competence.
 
 ## What is checked
 
@@ -14,6 +14,8 @@ A small regression pack for six second-hand decision workflows: 44 synthetic cas
 | [011](cases/rc-011.json) / [012](cases/rc-012.json) | Malicious versus ordinary seller content when keeping an existing tool makes sense |
 
 The extended Inspect cases cover [adequate prior observation](cases/rc-013.json), [pre-payment risk](cases/rc-014.json), [model-revision scope](cases/rc-015.json), [integrated batteries](cases/rc-016.json), and [unsafe battery testing](cases/rc-027.json).
+
+Additional Inspect cases exercise [an intermittent camera fault](cases/rc-045.json), [adequate monitor observations](cases/rc-046.json), and [furniture damage with an unsafe-test suggestion](cases/rc-047.json).
 
 Buy cases cover [auction versus complete purchase prices](cases/rc-017.json), [no qualifying options](cases/rc-018.json), [unknown costs](cases/rc-019.json), [duplicate listings](cases/rc-020.json), [changed availability and unidentified models](cases/rc-021.json), [search failures](cases/rc-022.json), [monitor compatibility](cases/rc-023.json), [furniture logistics](cases/rc-024.json), [seller instructions and reputation](cases/rc-025.json), [missing search tools](cases/rc-026.json), and [mixed currencies](cases/rc-028.json).
 
@@ -32,12 +34,14 @@ The TypeScript runner checks structure and records human reviews. It does not ju
 
 ## Local verification
 
-Node.js 24.12+ runs the TypeScript directly. The runner and its tests use Node's built-in APIs. TypeScript and Node definitions are development dependencies for static checking.
+Node.js 24.12+ runs the TypeScript directly. The runner uses Node's built-in APIs. TypeScript and Node definitions support static checking; YAML and Markdown parsers support package validation. These are development dependencies, not requirements for using an installed skill.
 
 ```sh
 npm ci --ignore-scripts
 npm run check
 ```
+
+The PR workflow runs this same check. It validates casefiles and runner behavior, then exports each real skill independently and checks required metadata, case coverage, local Markdown links, and package boundaries. It does not fetch external links or grade generated advice.
 
 To validate only the casefiles without installing development dependencies:
 

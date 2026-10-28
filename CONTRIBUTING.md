@@ -58,7 +58,7 @@ npm run check
 git diff --check
 ```
 
-`npm run check` verifies TypeScript, casefile structure, and runner behavior. It does not grade shopping advice. Add a focused regression test when changing non-trivial runner logic; prose edits do not need tests that merely match their wording.
+`npm run check` verifies TypeScript, casefile structure, runner behavior, and each skill's metadata and self-contained package. It catches missing skills, broken local Markdown links, and references outside the installed skill. It does not grade shopping advice. Add a focused regression test when changing non-trivial runner logic; prose edits do not need tests that merely match their wording.
 
 For a skill change, verify discovery:
 
