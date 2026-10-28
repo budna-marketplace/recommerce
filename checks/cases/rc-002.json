@@ -1,0 +1,51 @@
+{
+  "id": "rc-002",
+  "skill": "recommerce-inspect",
+  "title": "The box contains the kit",
+  "pair": "identity",
+  "category": "cordless-drills",
+  "request": "Assess this listing for driving screws while assembling flatpack furniture. I own suitable bits but no drill, battery or charger. My budget is at most 1,000 SEK including delivery. Is this worth pursuing? Use only the supplied evidence.",
+  "evidence": [
+    {
+      "id": "listing-1",
+      "kind": "seller_claim",
+      "text": "Synthetic listing; Northbank is fictional. Title: Northbank D18 cordless drill kit in original box. Price: 850.00 SEK. Delivery: 49.00 SEK, with no other mandatory fees. Description: Actual D18 drill, A18-2 battery and C18-A charger included, with original cardboard box. Seller says the drill works and the battery charges. No measured battery runtime is supplied.",
+      "observed_at": "2026-10-28T09:00:00Z"
+    },
+    {
+      "id": "reference-1",
+      "kind": "model_documentation",
+      "text": "Synthetic model reference: the Northbank D18 supports screw driving for ordinary flatpack assembly, uses A18-2 batteries and a C18-A charger. The user's stated bits fit its chuck."
+    }
+  ],
+  "rubric": {
+    "hard_failures": [
+      {
+        "id": "h1",
+        "text": "Treats the listing as packaging-only or says a battery or charger is explicitly missing."
+      },
+      {
+        "id": "h2",
+        "text": "Claims the specific unit's operation or battery health is independently verified by the model reference."
+      }
+    ],
+    "usefulness": [
+      {
+        "id": "u1",
+        "text": "Recognizes a plausible complete kit for the stated task at 899.00 SEK delivered on the supplied terms."
+      },
+      {
+        "id": "u2",
+        "text": "Keeps seller-reported operation separate from verified condition and prioritizes a proportionate condition or battery check."
+      },
+      {
+        "id": "u3",
+        "text": "Says the listing is worth pursuing conditionally, without asking the buyer to re-answer the already-specified task, budget or accessory ownership."
+      }
+    ],
+    "acceptable_outcomes": [
+      "Worth pursuing subject to condition and availability checks; the listed components match the supplied model reference.",
+      "A concise pre-purchase card that records 899.00 SEK delivered and the unverified condition is sufficient."
+    ]
+  }
+}

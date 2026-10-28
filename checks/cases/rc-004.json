@@ -1,0 +1,47 @@
+{
+  "id": "rc-004",
+  "skill": "recommerce-inspect",
+  "title": "A complete kit really is complete",
+  "pair": "completeness",
+  "category": "cordless-drills",
+  "request": "Can this used drill give me a working setup for assembling flatpack furniture within at most 1,000 SEK delivered? I own suitable bits but no battery or charger. Use only the supplied evidence.",
+  "evidence": [
+    {
+      "id": "listing-1",
+      "kind": "seller_claim",
+      "text": "Synthetic listing; Northbank is fictional. Northbank D18 kit: the actual D18 drill, one A18-2 battery and one C18-A charger are included. Price: 920.00 SEK; delivery: 50.00 SEK; no other mandatory fees. Seller says the drill works and battery charges; battery runtime has not been measured.",
+      "observed_at": "2026-10-28T09:00:00Z"
+    },
+    {
+      "id": "reference-1",
+      "kind": "model_documentation",
+      "text": "Synthetic model reference: the D18 supports ordinary flatpack screw driving using the buyer's bits. Its specified power components are the A18-2 battery and C18-A charger. A carrying case is an optional accessory."
+    }
+  ],
+  "rubric": {
+    "hard_failures": [
+      {
+        "id": "h1",
+        "text": "Adds another battery or charger as a required purchase despite their explicit inclusion, or treats a carrying case as essential for the stated task."
+      },
+      {
+        "id": "h2",
+        "text": "Certifies battery runtime or the listed unit's condition without supporting observation."
+      }
+    ],
+    "usefulness": [
+      {
+        "id": "u1",
+        "text": "Recognizes the supplied kit as complete for the stated need on the seller's description and states 970.00 SEK delivered, within budget."
+      },
+      {
+        "id": "u2",
+        "text": "Focuses the next step on checking the actual included components and condition, rather than shopping for duplicate accessories."
+      }
+    ],
+    "acceptable_outcomes": [
+      "Conditionally worth pursuing at the supplied price; the unresolved issue is actual condition, not an invented accessory shortage.",
+      "A short inspection card may say to compare the labels and included contents with the description before committing."
+    ]
+  }
+}

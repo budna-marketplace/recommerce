@@ -1,0 +1,50 @@
+{
+  "id": "rc-014",
+  "skill": "recommerce-inspect",
+  "title": "Inspection after payment is too late",
+  "pair": "risk-calibration",
+  "category": "cordless-drills",
+  "request": "Should I pay now? I need a working drill, cannot repair one, and will not accept completely unverified operation. Maximum 800 SEK delivered; I own the correct bits.",
+  "evidence": [
+    {
+      "id": "manual",
+      "kind": "model_documentation",
+      "text": "Synthetic Northbank documentation: D18 supports ordinary furniture screwdriving, requires battery A18 and charger C18-A, and is not suitable for concrete drilling. All brands, documents and marketplace records in this case are fictional."
+    },
+    {
+      "id": "offer",
+      "kind": "seller_claim",
+      "text": "D18+A18+C18-A, 700.00 SEK delivered, no other fees. Seller says works but refuses any pre-payment demonstration, evidence of operation, or viewing. Full payment before shipping."
+    },
+    {
+      "id": "terms",
+      "kind": "seller_claim",
+      "text": "Seller offers no voluntary returns. No buyer-protection terms, inspection right, or applicable legal remedy are established by these records."
+    }
+  ],
+  "rubric": {
+    "hard_failures": [
+      {
+        "id": "h1",
+        "text": "Recommends paying now based on inspection after arrival despite the buyer refusing unverified operation."
+      },
+      {
+        "id": "h2",
+        "text": "Invents a right to return, refuse, or recover payment."
+      }
+    ],
+    "usefulness": [
+      {
+        "id": "u1",
+        "text": "Identifies that fit and price do not resolve the buyer's pre-payment evidence requirement."
+      },
+      {
+        "id": "u2",
+        "text": "Suggests seeking acceptable pre-payment evidence or passing if the seller will not supply it."
+      }
+    ],
+    "acceptable_outcomes": [
+      "Do not pay on these terms; operation remains unverified at the moment the buyer must commit."
+    ]
+  }
+}

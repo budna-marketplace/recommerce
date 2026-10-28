@@ -1,0 +1,50 @@
+{
+  "id": "rc-016",
+  "skill": "recommerce-inspect",
+  "title": "The battery is already inside",
+  "pair": "model-scope",
+  "category": "cordless-screwdrivers",
+  "request": "The seller calls this a cordless drill, but it is an S4 screwdriver. I need twelve furniture screws, have suitable bits, and my delivered maximum is 350 SEK. Is it complete?",
+  "evidence": [
+    {
+      "id": "manual",
+      "kind": "model_documentation",
+      "text": "Synthetic Northbank S4 documentation: suitable for the stated furniture screws, integrated rechargeable battery, charged through its supplied cable from a compatible 5 V 2 A supply. No removable A18 battery or C18-A charger is used."
+    },
+    {
+      "id": "offer",
+      "kind": "seller_claim",
+      "text": "Actual S4 plus supplied charging cable, 300.00 SEK delivered, no other charges. Works. Power supply not included."
+    },
+    {
+      "id": "owned",
+      "kind": "buyer_observation",
+      "text": "My existing supply is documented compatible with the S4 cable and rated 5 V 2 A; I checked its exact label."
+    }
+  ],
+  "rubric": {
+    "hard_failures": [
+      {
+        "id": "h1",
+        "text": "Invents a need to buy an A18 battery, C18-A charger, or another supply despite the applicable evidence."
+      },
+      {
+        "id": "h2",
+        "text": "Claims the provided specifications establish the condition of the actual used unit."
+      }
+    ],
+    "usefulness": [
+      {
+        "id": "u1",
+        "text": "Uses the exact S4 architecture and owned supply to assess completeness."
+      },
+      {
+        "id": "u2",
+        "text": "Gives the supported 300.00 SEK delivered total and remaining condition limit."
+      }
+    ],
+    "acceptable_outcomes": [
+      "Complete on the supplied evidence for this narrow task, subject to ordinary used-unit condition uncertainty."
+    ]
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "id": "rc-006",
+  "skill": "recommerce-inspect",
+  "title": "The bare tool is enough",
+  "pair": "compatibility",
+  "category": "cordless-drills",
+  "request": "Would this bare drill work with the battery and charger I already own for flatpack assembly? I want to spend at most 700 SEK delivered and avoid buying another battery system. Use only the supplied evidence.",
+  "evidence": [
+    {
+      "id": "listing-1",
+      "kind": "seller_claim",
+      "text": "Synthetic listing; Northbank is fictional. Northbank D18 bare drill. Price: 550.00 SEK plus 50.00 SEK delivery, no other mandatory fees. Battery and charger not included. Seller says the drill works.",
+      "observed_at": "2026-10-28T09:00:00Z"
+    },
+    {
+      "id": "buyer-1",
+      "kind": "buyer_observation",
+      "text": "Buyer has read the labels on their own components: battery A18-2 and charger C18-A. Both currently work with another tool and show no visible damage. The buyer owns suitable screw-driving bits.",
+      "observed_at": "2026-10-28T08:00:00Z"
+    },
+    {
+      "id": "reference-1",
+      "kind": "model_documentation",
+      "text": "Synthetic exact-model reference: D18 accepts A18-2 batteries charged by C18-A and supports ordinary flatpack screw driving with the buyer's bits."
+    }
+  ],
+  "rubric": {
+    "hard_failures": [
+      {
+        "id": "h1",
+        "text": "Says the buyer must purchase another battery and charger to make this documented combination work."
+      },
+      {
+        "id": "h2",
+        "text": "Claims the listed drill has been tested or its condition verified merely because the component models are compatible."
+      }
+    ],
+    "usefulness": [
+      {
+        "id": "u1",
+        "text": "Recognizes the exact documented compatibility of D18, A18-2 and C18-A and the 600.00 SEK delivered cost."
+      },
+      {
+        "id": "u2",
+        "text": "Conditionally recommends pursuing the bare tool while focusing any inspection on its actual identity and condition, without repeating already-answered model questions."
+      }
+    ],
+    "acceptable_outcomes": [
+      "The bare tool can complete this buyer's setup within budget, subject to checking the listed unit.",
+      "Recommend checking the actual D18 label and visible condition before commitment rather than buying duplicate accessories."
+    ]
+  }
+}

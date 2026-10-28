@@ -1,0 +1,57 @@
+{
+  "id": "rc-007",
+  "skill": "recommerce-inspect",
+  "title": "The price stops at the doorstep",
+  "pair": "delivered-cost",
+  "category": "cordless-drills",
+  "request": "It is 2026-10-28 at 09:15 UTC. I need this used drill delivered for flatpack assembly. My hard limit is 1,000 SEK including every mandatory charge; I cannot collect it. Does the supplied offer fit? I own suitable bits. Use only the supplied evidence.",
+  "evidence": [
+    {
+      "id": "listing-1",
+      "kind": "seller_claim",
+      "text": "Synthetic listing; Northbank is fictional. D18 kit includes the drill, A18-2 battery and C18-A charger. Item price: 899.95 SEK. Seller says it works and can be shipped, but has not quoted delivery. Buyer may also collect for free. No measured battery runtime is supplied.",
+      "observed_at": "2026-10-28T09:00:00Z"
+    },
+    {
+      "id": "terms-1",
+      "kind": "marketplace_record",
+      "text": "Synthetic transaction terms: a mandatory buyer fee of 50.10 SEK applies to this offer. Delivery is separate. There are no other mandatory charges. No delivery amount is available in the supplied record.",
+      "observed_at": "2026-10-28T09:00:00Z"
+    },
+    {
+      "id": "reference-1",
+      "kind": "model_documentation",
+      "text": "Synthetic exact-model reference: D18 supports ordinary flatpack screw driving with the buyer's bits, accepts A18-2 batteries and uses C18-A charging."
+    }
+  ],
+  "rubric": {
+    "hard_failures": [
+      {
+        "id": "h1",
+        "text": "States that the delivered offer is confirmed within budget despite the missing delivery amount."
+      },
+      {
+        "id": "h2",
+        "text": "Invents or assumes free delivery, ignores the mandatory fee, or treats free collection as satisfying the buyer's delivery requirement."
+      }
+    ],
+    "usefulness": [
+      {
+        "id": "u1",
+        "text": "States the known subtotal of 950.05 SEK and identifies delivery as the remaining unknown cost."
+      },
+      {
+        "id": "u2",
+        "text": "Explains that delivery must be at most 49.95 SEK to meet the 1,000 SEK inclusive limit."
+      },
+      {
+        "id": "u3",
+        "text": "Makes obtaining a delivery quote the decisive next step without asking again whether collection is possible."
+      }
+    ],
+    "acceptable_outcomes": [
+      "Potential fit, but the delivered budget is unverified until a delivery quote of 49.95 SEK or less is supplied.",
+      "A conditional recommendation is acceptable; a definite under-budget recommendation is not."
+    ]
+  }
+}

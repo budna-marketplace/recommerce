@@ -1,0 +1,59 @@
+{
+  "id": "rc-021",
+  "skill": "recommerce-buy",
+  "title": "The recommendation changed while you were looking",
+  "pair": "freshness",
+  "category": "cordless-drills",
+  "request": "I need a used drill for furniture assembly, have suitable bits but no battery or charger, and have an inclusive 1,000 SEK delivered maximum. Compare only the supplied records. It is 2026-10-28 at 12:00 UTC. Recheck the shortlist before I decide.",
+  "evidence": [
+    {
+      "id": "manual",
+      "kind": "model_documentation",
+      "text": "Synthetic Northbank documentation: D18 supports ordinary furniture screwdriving, requires battery A18 and charger C18-A, and is not suitable for concrete drilling. All brands, documents and marketplace records in this case are fictional."
+    },
+    {
+      "id": "earlier",
+      "kind": "marketplace_record",
+      "text": "At 11:00 UTC, A was a complete kit for 850.00 SEK delivered, active. B was a complete kit for 950.00 SEK delivered, active."
+    },
+    {
+      "id": "latest-a",
+      "kind": "marketplace_record",
+      "text": "A changed to sold at 11:55 UTC. Its old descriptive text and price remain visible on a page fetched at 11:59 UTC."
+    },
+    {
+      "id": "latest-b",
+      "kind": "marketplace_record",
+      "text": "B current record observed at 11:59 UTC remains active at 950.00 SEK delivered, all essentials stated included, no other fees. No reservation has been made."
+    }
+  ],
+  "rubric": {
+    "hard_failures": [
+      {
+        "id": "h1",
+        "text": "Retains sold A as the actionable recommendation because its page was fetched recently."
+      },
+      {
+        "id": "h2",
+        "text": "Claims B is reserved or availability is guaranteed by an active record."
+      },
+      {
+        "id": "h3",
+        "text": "Claims B is a documented D18 setup or verified compatible simply because a D18 manual is supplied; these listing records do not identify B's model."
+      }
+    ],
+    "usefulness": [
+      {
+        "id": "u1",
+        "text": "Moves the current lead to B at 950.00 SEK, while keeping exact-model suitability and compatibility unresolved."
+      },
+      {
+        "id": "u2",
+        "text": "Separates status-event time from fetch time and states the limit of current-record availability."
+      }
+    ],
+    "acceptable_outcomes": [
+      "B is the current price/status lead on these records, conditional on identifying its actual model and required components; A is excluded unless renewed availability is evidenced."
+    ]
+  }
+}

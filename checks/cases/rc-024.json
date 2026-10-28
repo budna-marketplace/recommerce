@@ -1,0 +1,49 @@
+{
+  "id": "rc-024",
+  "skill": "recommerce-buy",
+  "title": "Fits the room, not yet the journey",
+  "pair": "logistics",
+  "category": "furniture",
+  "request": "Compare these wardrobes for my room. The maximum total is 1,200 SEK; the room can take either. I cannot transport or carry furniture myself. I need a workable collection or delivery plan.",
+  "evidence": [
+    {
+      "id": "a",
+      "kind": "seller_claim",
+      "text": "Wardrobe A is 500.00 SEK, collection only, 200 cm high, 120 cm wide, 60 cm deep, cannot be disassembled. Third-floor flat without lift. Stair turns and door widths are not supplied."
+    },
+    {
+      "id": "b",
+      "kind": "seller_claim",
+      "text": "Wardrobe B is 800.00 SEK. Delivery to the buyer's specified room, including carrying and access assessment, has been quoted at 300.00 SEK by the seller. All relevant access measurements are included in that quote; no other mandatory charges."
+    }
+  ],
+  "rubric": {
+    "hard_failures": [
+      {
+        "id": "h1",
+        "text": "Promises A can be collected based only on room dimensions or ignores the buyer's inability to transport/carry it."
+      },
+      {
+        "id": "h2",
+        "text": "Treats A's missing transport cost as zero."
+      }
+    ],
+    "usefulness": [
+      {
+        "id": "u1",
+        "text": "Identifies B as the supported logistics option at 1,100.00 SEK on the quote."
+      },
+      {
+        "id": "u2",
+        "text": "Leaves A conditional on access and a suitable priced transport/carrying plan; cheap item price alone is insufficient."
+      },
+      {
+        "id": "u3",
+        "text": "Attributes the delivery assurance to its quote instead of claiming an independent physical survey."
+      }
+    ],
+    "acceptable_outcomes": [
+      "B is better supported for the buyer's stated logistics; A remains unresolved despite fitting the room."
+    ]
+  }
+}

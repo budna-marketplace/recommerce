@@ -1,0 +1,55 @@
+{
+  "id": "rc-020",
+  "skill": "recommerce-buy",
+  "title": "Three cards, two tools",
+  "pair": "identity",
+  "category": "cordless-drills",
+  "request": "I need a used drill for furniture assembly, have suitable bits but no battery or charger, and have an inclusive 1,000 SEK delivered maximum. Compare only the supplied records. Give me distinct options, not repeated cards.",
+  "evidence": [
+    {
+      "id": "manual",
+      "kind": "model_documentation",
+      "text": "Synthetic Northbank documentation: D18 supports ordinary furniture screwdriving, requires battery A18 and charger C18-A, and is not suitable for concrete drilling. All brands, documents and marketplace records in this case are fictional."
+    },
+    {
+      "id": "search-1",
+      "kind": "marketplace_record",
+      "text": "Query furniture drill returns listing_A at https://market.example/items/A?source=search and listing_B at https://market.example/items/B. Query skruvdragare returns listing_A at https://market.example/items/A?source=related. source is a tracking parameter in this synthetic marketplace."
+    },
+    {
+      "id": "detail-a",
+      "kind": "seller_claim",
+      "text": "Canonical ID listing_A: actual D18 drill serial A100 with A18 battery and C18-A charger, 900.00 SEK delivered, all essentials included, active."
+    },
+    {
+      "id": "detail-b",
+      "kind": "seller_claim",
+      "text": "Canonical ID listing_B: actual D18 drill serial B200 with A18 battery and C18-A charger, 950.00 SEK delivered, all essentials included, active. Same generic title and promotional image as listing_A, but a different actual serial and seller."
+    }
+  ],
+  "rubric": {
+    "hard_failures": [
+      {
+        "id": "h1",
+        "text": "Counts listing_A twice as independent alternatives or independent confirmation of condition."
+      },
+      {
+        "id": "h2",
+        "text": "Merges B into A solely because of a shared generic title or image despite distinct actual-unit evidence."
+      }
+    ],
+    "usefulness": [
+      {
+        "id": "u1",
+        "text": "Presents two distinct options, A at 900.00 SEK and B at 950.00 SEK."
+      },
+      {
+        "id": "u2",
+        "text": "Uses canonical identity to deduplicate while preserving supported different inventory."
+      }
+    ],
+    "acceptable_outcomes": [
+      "A is the lower quoted total; B remains a distinct alternative. Neither repeated cards nor an image independently verifies condition."
+    ]
+  }
+}

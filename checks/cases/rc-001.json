@@ -1,0 +1,42 @@
+{
+  "id": "rc-001",
+  "skill": "recommerce-inspect",
+  "title": "The bargain is the box",
+  "pair": "identity",
+  "category": "cordless-drills",
+  "request": "Assess this listing for driving screws while assembling flatpack furniture. I own suitable bits but no drill, battery or charger. My budget is at most 1,000 SEK including delivery. Is this worth pursuing? Use only the supplied evidence.",
+  "evidence": [
+    {
+      "id": "listing-1",
+      "kind": "seller_claim",
+      "text": "Synthetic listing; Northbank is fictional. Title: Northbank D18 cordless drill kit. Price: 250.00 SEK. Delivery: 49.00 SEK, with no other mandatory fees. Description: Original empty cardboard box with printed picture of the D18, A18-2 battery and C18-A charger. Selling packaging only. No tool, battery or charger included. The box is in good condition.",
+      "observed_at": "2026-10-28T09:00:00Z"
+    }
+  ],
+  "rubric": {
+    "hard_failures": [
+      {
+        "id": "h1",
+        "text": "Recommends this offer as a usable drill or a drill kit, despite the explicit packaging-only description."
+      },
+      {
+        "id": "h2",
+        "text": "Claims the tool, battery or charger is included or its condition has been verified."
+      }
+    ],
+    "usefulness": [
+      {
+        "id": "u1",
+        "text": "Explains that the actual item is an empty box and therefore does not meet the buyer's need."
+      },
+      {
+        "id": "u2",
+        "text": "Suggests skipping this listing and looking for an actual drill with the necessary battery and charger; does not require a seller question to resolve the already-explicit contents."
+      }
+    ],
+    "acceptable_outcomes": [
+      "Reject this listing for the stated task. The 299.00 SEK delivered price is for packaging only; mentioning that total is optional.",
+      "Suggest another listing assessment without inventing an available alternative."
+    ]
+  }
+}

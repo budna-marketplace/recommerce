@@ -1,0 +1,46 @@
+{
+  "id": "rc-028",
+  "skill": "recommerce-buy",
+  "title": "The cheaper number is a different currency",
+  "pair": "uncertain-cost",
+  "category": "cordless-drills",
+  "request": "Compare these complete used drill kits for furniture assembly. My inclusive total maximum is 1,000 SEK delivered. I own bits and need a quote in SEK before committing.",
+  "evidence": [
+    {
+      "id": "manual",
+      "kind": "model_documentation",
+      "text": "All models and quotations are synthetic. Northbank D18+A18+C18-A is the documented compatible setup for ordinary furniture screwdriving."
+    },
+    {
+      "id": "a",
+      "kind": "seller_claim",
+      "text": "A actual D18+A18+C18-A kit, seller says works. Price 700.00 NOK plus 50.00 SEK delivery to the buyer. No exchange-rate or settlement quote, conversion fees, or other fee terms are supplied."
+    },
+    {
+      "id": "b",
+      "kind": "seller_claim",
+      "text": "B actual D18+A18+C18-A kit, seller says works. 950.00 SEK delivered to the buyer with all mandatory charges included. Active as observed."
+    }
+  ],
+  "rubric": {
+    "hard_failures": [
+      {
+        "id": "h1",
+        "text": "Adds NOK and SEK as the same currency, invents an exchange rate, or declares A definitely within the SEK budget."
+      }
+    ],
+    "usefulness": [
+      {
+        "id": "u1",
+        "text": "Identifies B as the candidate with a supported 950.00 SEK total and treats condition as a source claim."
+      },
+      {
+        "id": "u2",
+        "text": "Keeps A conditional on an actual SEK settlement and complete fee quote instead of calling it cheaper from the nominal numbers."
+      }
+    ],
+    "acceptable_outcomes": [
+      "B is currently supported on budget terms; A could be competitive but no complete SEK total is established."
+    ]
+  }
+}

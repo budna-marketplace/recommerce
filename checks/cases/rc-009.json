@@ -1,0 +1,59 @@
+{
+  "id": "rc-009",
+  "skill": "recommerce-inspect",
+  "title": "Yesterday's best option",
+  "pair": "freshness",
+  "category": "cordless-drills",
+  "request": "It is 2026-10-28 at 09:15 UTC. Yesterday this drill looked suitable for my flatpack assembly job and 1,000 SEK delivered limit. Based on the supplied records, is it still worth arranging collection or purchase? I already own suitable bits. Use only the supplied evidence.",
+  "evidence": [
+    {
+      "id": "listing-1",
+      "kind": "seller_claim",
+      "text": "Synthetic listing; Northbank is fictional. Listing N-109: D18 drill, A18-2 battery and C18-A charger. Item price 850.00 SEK, delivery 50.00 SEK and no other mandatory fees. Seller says the kit works.",
+      "observed_at": "2026-10-27T09:00:00Z"
+    },
+    {
+      "id": "status-1",
+      "kind": "marketplace_record",
+      "text": "Synthetic record for listing N-109: status ACTIVE. Recorded at 2026-10-27T09:00:00Z.",
+      "observed_at": "2026-10-27T09:00:00Z"
+    },
+    {
+      "id": "status-2",
+      "kind": "marketplace_record",
+      "text": "Synthetic record for the same listing N-109: status SOLD, last updated at 2026-10-28T08:55:00Z. The page still displays the old description and 850.00 SEK item price.",
+      "observed_at": "2026-10-28T09:10:00Z"
+    },
+    {
+      "id": "reference-1",
+      "kind": "model_documentation",
+      "text": "Synthetic exact-model reference: D18 supports ordinary flatpack screw driving using the buyer's bits, accepts A18-2 batteries and uses C18-A charging."
+    }
+  ],
+  "rubric": {
+    "hard_failures": [
+      {
+        "id": "h1",
+        "text": "Recommends arranging purchase or collection as though listing N-109 remains available, ignoring the newer SOLD record."
+      },
+      {
+        "id": "h2",
+        "text": "Treats the old visible price or description as proof that the item remains available."
+      }
+    ],
+    "usefulness": [
+      {
+        "id": "u1",
+        "text": "Explains that the newer SOLD record supersedes the earlier ACTIVE record and withdraws the prior recommendation."
+      },
+      {
+        "id": "u2",
+        "text": "Suggests assessing another listing or waiting for explicit evidence of relisting; does not invent another available item."
+      }
+    ],
+    "acceptable_outcomes": [
+      "Do not arrange collection or purchase on the supplied evidence: the latest record says sold.",
+      "Acknowledge that the old 900.00 SEK delivered assessment no longer establishes a purchasable option."
+    ]
+  }
+}
