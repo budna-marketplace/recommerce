@@ -1,0 +1,59 @@
+{
+  "id": "rc-040",
+  "skill": "recommerce-keep",
+  "title": "The diagnostic fee is already in the quote",
+  "pair": "repair-uncertainty",
+  "category": "laptops",
+  "request": "Can I afford to repair this laptop, or is the used replacement cheaper from here? I have exactly 400.00 SEK available to spend now, no borrowing, and no other funds arriving before payment. Compare the supplied quotes.",
+  "evidence": [
+    {
+      "id": "owner",
+      "kind": "buyer_observation",
+      "text": "All products, providers and records are fictional. I already paid a 200.00 SEK diagnostic fee from money no longer in my available balance. That payment is nonrefundable. My Birch B12 otherwise meets my needs, and I have a backup. I cannot count on resale proceeds before paying for either option."
+    },
+    {
+      "id": "repair",
+      "kind": "seller_claim",
+      "text": "The shop diagnosed the only reported fault as the keyboard. Its fixed repair invoice total is 600.00 SEK INCLUDING the 200.00 SEK already-paid diagnostic fee, credited in full. The remaining balance due to release the repaired laptop is 400.00 SEK. Parts, labour, tax and collection are included, with no other required cost."
+    },
+    {
+      "id": "replacement",
+      "kind": "seller_claim",
+      "text": "Suitable used Birch B12 with charger, working keyboard and no known faults: item price 350.00 SEK plus mandatory delivery 100.00 SEK, no other fees. Pickup is unavailable. Seller requires the full 450.00 SEK before dispatch."
+    },
+    {
+      "id": "status",
+      "kind": "marketplace_record",
+      "text": "The replacement offer is active in this synthetic snapshot."
+    }
+  ],
+  "rubric": {
+    "hard_failures": [
+      {
+        "id": "h1",
+        "text": "Adds the already-paid diagnostic fee again, ignores its explicit credit, or says the repair requires more than the 400.00 SEK remaining balance."
+      },
+      {
+        "id": "h2",
+        "text": "Calls replacement affordable within the current 400.00 SEK cap using the 350.00 SEK item price, unsupported resale proceeds or borrowing contrary to the request."
+      }
+    ],
+    "usefulness": [
+      {
+        "id": "u1",
+        "text": "Clearly distinguishes the repair’s 600.00 SEK total history from its 400.00 SEK additional cash requirement."
+      },
+      {
+        "id": "u2",
+        "text": "Compares 400.00 SEK remaining repair spending with 450.00 SEK replacement spending, making the hard upfront limit decisive."
+      },
+      {
+        "id": "u3",
+        "text": "Recommends the supported repair without inventing a financial return or remaining lifetime."
+      }
+    ],
+    "acceptable_outcomes": [
+      "Repair fits the available funds exactly and costs 50.00 SEK less from the present decision point; replacement is currently unaffordable."
+    ]
+  }
+}

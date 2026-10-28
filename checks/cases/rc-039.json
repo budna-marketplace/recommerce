@@ -1,0 +1,59 @@
+{
+  "id": "rc-039",
+  "skill": "recommerce-keep",
+  "title": "Two possible faults are not a probability model",
+  "pair": "repair-uncertainty",
+  "category": "laptops",
+  "request": "My laptop sometimes shuts down without warning. Should I repair it or buy the supplied replacement? I have an inclusive 2,000.00 SEK available and need reliable portable work. I can wait a few days. Use only these records.",
+  "evidence": [
+    {
+      "id": "owner",
+      "kind": "buyer_observation",
+      "text": "All products, providers and records here are fictional. My Willow W14 meets my workload and I have a current backup. I have observed intermittent shutdowns but no overheating, swelling, liquid damage or other identified cause. I cannot tell whether battery or mainboard is responsible."
+    },
+    {
+      "id": "repair",
+      "kind": "seller_claim",
+      "text": "Shop has not examined this unit. Its preliminary examples are 400.00 SEK for a battery repair or 1,800.00 SEK for a mainboard repair, each including parts and labour if that single fault is confirmed. Neither is a fixed quote. A separate 150.00 SEK diagnostic appointment gives a written finding and quote before any repair. That fee is not credited toward repair. No cause probabilities or post-repair remaining-life estimate is available."
+    },
+    {
+      "id": "replacement",
+      "kind": "seller_claim",
+      "text": "A used Willow W14 with required specifications, charger and seller-reported working battery costs 1,400.00 SEK delivered including all fees. Seller reports no known faults. No independent condition inspection or remaining-life estimate is supplied."
+    },
+    {
+      "id": "status",
+      "kind": "marketplace_record",
+      "text": "Replacement is active in this synthetic snapshot. Diagnostic appointments are available this week."
+    }
+  ],
+  "rubric": {
+    "hard_failures": [
+      {
+        "id": "h1",
+        "text": "Assumes a battery diagnosis, assigns unsupported probabilities to possible faults, or calculates a numerical expected repair value or cost per remaining year from invented inputs."
+      },
+      {
+        "id": "h2",
+        "text": "Presents either preliminary repair example as a confirmed all-in quote for this unit or authorizes a repair as part of the diagnostic appointment."
+      }
+    ],
+    "usefulness": [
+      {
+        "id": "u1",
+        "text": "Separates the bounded 150.00 SEK diagnostic step from an unknown repair commitment and includes the noncredited fee in any later cost comparison."
+      },
+      {
+        "id": "u2",
+        "text": "Keeps the 1,400.00 SEK replacement conditional on its condition evidence rather than treating it as guaranteed reliable."
+      },
+      {
+        "id": "u3",
+        "text": "Offers a concrete decision point after diagnosis, or a defensible replacement preference if the buyer values avoiding diagnostic delay, without manufacturing certainty."
+      }
+    ],
+    "acceptable_outcomes": [
+      "Paying for diagnosis before deciding is reasonable, with no repair authorized; choosing the stated replacement after appropriate condition assessment can also be reasonable."
+    ]
+  }
+}

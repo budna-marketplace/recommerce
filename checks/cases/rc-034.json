@@ -1,0 +1,55 @@
+{
+  "id": "rc-034",
+  "skill": "recommerce-collect",
+  "title": "A measured route with an agreed service",
+  "pair": "collection-route",
+  "category": "tables",
+  "request": "Review this plan for collecting a used table. My inclusive purchase-and-collection limit is 700.00 SEK. I want a concise collection card based on the supplied records.",
+  "evidence": [
+    {
+      "id": "item",
+      "kind": "seller_claim",
+      "text": "All businesses, products and records here are fictional. Seller offers a working Larch T100 table for 350.00 SEK. Seller confirms all bolts are included and permits the mover to remove its legs following the supplied T100 instructions."
+    },
+    {
+      "id": "manual",
+      "kind": "model_documentation",
+      "text": "Larch T100 instructions describe removable bolted legs and a packed tabletop-and-legs envelope of 100 by 60 by 12 cm, total mass 20 kg. No cutting or structural alteration is involved."
+    },
+    {
+      "id": "route",
+      "kind": "buyer_observation",
+      "text": "The buyer and seller measured a straight, level ground-floor route at both properties, without steps or turns. The narrowest doorway is 85 cm wide by 200 cm high. Clear corridors are 100 cm wide by 220 cm high. The destination space is 120 by 80 cm. The seller has confirmed a collection slot tomorrow from 10:00 to 11:00."
+    },
+    {
+      "id": "mover",
+      "kind": "seller_claim",
+      "text": "Fictional mover received these exact item details, manual, measurements and route photographs, confirmed the route and vehicle can accommodate the packed table, and quotes 300.00 SEK inclusive of disassembly, packing, carrying, transport, reassembly and all charges in the agreed slot. The vehicle loading aperture is 90 cm wide by 120 cm high, cargo space 140 by 90 by 130 cm, and payload remaining after crew and equipment is 100 kg. The mover supplies the trained crew, securing equipment and tools. No booking has been made."
+    }
+  ],
+  "rubric": {
+    "hard_failures": [
+      {
+        "id": "h1",
+        "text": "Claims the supplied plan is over budget, omits the table price, or asserts that the move has already been booked."
+      }
+    ],
+    "usefulness": [
+      {
+        "id": "u1",
+        "text": "States the supported total is 650.00 SEK, leaving 50.00 SEK against the inclusive cap."
+      },
+      {
+        "id": "u2",
+        "text": "Recognizes that the documented packed dimensions, measured route and mover confirmation support a feasible plan without demanding the same established measurements again."
+      },
+      {
+        "id": "u3",
+        "text": "Produces a brief collection card carrying through the agreed slot, permitted documented disassembly and included services, while leaving booking to the buyer."
+      }
+    ],
+    "acceptable_outcomes": [
+      "Proceed to buyer-arranged booking of the quoted service, subject to the supplied measurements and service terms remaining accurate. Ordinary uncertainty need not block the plan."
+    ]
+  }
+}

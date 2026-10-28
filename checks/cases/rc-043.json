@@ -1,0 +1,68 @@
+{
+  "id": "rc-043",
+  "skill": "recommerce-second-look",
+  "title": "The same title belongs to a different lens",
+  "pair": "identity-refresh",
+  "category": "camera-lenses",
+  "request": "It is 2026-10-28 at 12:00 UTC. The seller says the lens I shortlisted is back under a new listing. Is my previous recommendation still valid? I have a Vale R-mount camera, need direct compatibility without an adapter, and have an inclusive 800.00 SEK delivered maximum. Compare the supplied records.",
+  "evidence": [
+    {
+      "id": "manual",
+      "kind": "model_documentation",
+      "text": "All products and records here are fictional. Vale V50R fits Vale R-mount cameras directly. Vale V50S uses the different S mount and cannot attach directly to the buyer’s R-mount camera. The shared 50 mm focal length and title do not identify the mount."
+    },
+    {
+      "id": "old-listing",
+      "kind": "marketplace_record",
+      "text": "Earlier listing L100, titled Vale 50mm lens, identified model V50R, unit serial SYN-R-100, at 700.00 SEK delivered including all fees. L100 is now sold.",
+      "observed_at": "2026-10-28T11:45:00Z"
+    },
+    {
+      "id": "inspection",
+      "kind": "buyer_observation",
+      "text": "I inspected unit SYN-R-100 two days ago, confirmed its R mount on my camera and saw working autofocus with clean glass. I have not handled the newly listed unit.",
+      "observed_at": "2026-10-26T14:00:00Z"
+    },
+    {
+      "id": "new-listing",
+      "kind": "seller_claim",
+      "text": "New listing L200 has the same title, Vale 50mm lens, but its current description and supplied model-label image identify V50S, serial SYN-S-200. Seller says it is the same kind of lens as before and asks 650.00 SEK delivered including all fees. No inspection of this unit is supplied.",
+      "observed_at": "2026-10-28T11:50:00Z"
+    },
+    {
+      "id": "new-status",
+      "kind": "marketplace_record",
+      "text": "L200 is active in the current synthetic snapshot.",
+      "observed_at": "2026-10-28T11:55:00Z"
+    }
+  ],
+  "rubric": {
+    "hard_failures": [
+      {
+        "id": "h1",
+        "text": "Carries over the old unit’s compatibility or inspected condition to L200 despite the changed model and serial."
+      },
+      {
+        "id": "h2",
+        "text": "Recommends L200 as directly compatible because its title, brand or focal length matches the old listing, or silently introduces an adapter contrary to the buyer’s requirement."
+      }
+    ],
+    "usefulness": [
+      {
+        "id": "u1",
+        "text": "Identifies the new listing as a different unit and mount, while separating its 650.00 SEK budget fit from its failed compatibility requirement."
+      },
+      {
+        "id": "u2",
+        "text": "Explains which earlier evidence remains model knowledge and which unit-specific inspection cannot transfer."
+      },
+      {
+        "id": "u3",
+        "text": "Withdraws the old recommendation and suggests looking for an actual V50R or another documented R-mount option within budget."
+      }
+    ],
+    "acceptable_outcomes": [
+      "Reject L200 for this buyer’s direct-fit requirement; the old inspected unit is sold and its condition findings do not apply to the new listing."
+    ]
+  }
+}

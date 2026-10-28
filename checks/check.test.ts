@@ -102,18 +102,28 @@ test('export allowlists input, copies only skill, and rejects overwrite or repos
   assert.throws(() => exportCases([sample()], join(directory, 'unsafe'), true, root));
 }));
 
-test('mixed suites export each case with only its declared skill', () => scratch(directory => {
+test('all six workflows validate and export with only their own skill', () => scratch(directory => {
   const root = join(directory, 'repo');
-  for (const name of ['recommerce-inspect', 'recommerce-buy']) {
+  const skills = ['recommerce-buy', 'recommerce-kits', 'recommerce-inspect', 'recommerce-collect',
+    'recommerce-keep', 'recommerce-second-look'] as const;
+  for (const name of skills) {
     mkdirSync(join(root, 'skills', name), { recursive: true });
     writeFileSync(join(root, 'skills', name, 'SKILL.md'), name);
+    mkdirSync(join(root, 'skills', name, 'references'));
+    writeFileSync(join(root, 'skills', name, 'references', 'guide.md'), `${name} reference`);
   }
-  const cases: Casefile[] = [sample(), { ...sample(), id: 'rc-002', skill: 'recommerce-buy' }];
+  const cases = skills.map((skill, index) => validateCase({ ...sample(), id: `rc-00${index + 1}`, skill }));
+  const caseDir = join(root, 'cases');
+  mkdirSync(caseDir);
+  for (const item of cases) writeFileSync(join(caseDir, `${item.id}.json`), JSON.stringify(item));
+  for (const skill of skills) assert.deepEqual(loadCases(caseDir, skill).map(item => item.skill), [skill]);
   const output = join(directory, 'export');
   exportCases(cases, output, true, root);
   for (const item of cases) {
     assert.deepEqual(readdirSync(join(output, item.id, 'skills')), [item.skill]);
     assert.equal(readFileSync(join(output, item.id, 'skills', item.skill, 'SKILL.md'), 'utf8'), item.skill);
+    assert.equal(readFileSync(join(output, item.id, 'skills', item.skill, 'references', 'guide.md'), 'utf8'),
+      `${item.skill} reference`);
     const input = JSON.parse(readFileSync(join(output, item.id, 'input.json'), 'utf8'));
     assert.deepEqual(Object.keys(input).sort(), ['evidence', 'instruction', 'request']);
   }

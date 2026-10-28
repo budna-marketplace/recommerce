@@ -1,0 +1,59 @@
+{
+  "id": "rc-037",
+  "skill": "recommerce-keep",
+  "title": "The small repair already has a diagnosis",
+  "pair": "repair-economics",
+  "category": "laptops",
+  "request": "Should I repair my laptop or buy the supplied used replacement? I need it for documents and video calls, with at least three hours away from a socket. My maximum available spend is 1,600.00 SEK. Compare only these records.",
+  "evidence": [
+    {
+      "id": "owner",
+      "kind": "buyer_observation",
+      "text": "All products and businesses in this case are fictional. My Alder L14 performs all my work well when plugged in. It has no other observed fault, and I have a current backup. The only problem is that its battery lasts twenty minutes."
+    },
+    {
+      "id": "diagnosis",
+      "kind": "seller_claim",
+      "text": "Repair shop’s written report says it tested this exact laptop, found battery wear, and found no other fault in its stated checks. A fixed 450.00 SEK total covers a compatible replacement battery, fitting, tax and a completed three-hour runtime test before acceptance. No transport or extra diagnostic fee is payable; I can collect it tomorrow."
+    },
+    {
+      "id": "replacement",
+      "kind": "seller_claim",
+      "text": "A working used Alder L14 with the same memory and storage costs 1,500.00 SEK delivered, with all mandatory fees included. Seller claims its battery lasts at least three hours. Charger is included; data setup needs no paid service."
+    },
+    {
+      "id": "status",
+      "kind": "marketplace_record",
+      "text": "The used replacement is active in this synthetic snapshot."
+    }
+  ],
+  "rubric": {
+    "hard_failures": [
+      {
+        "id": "h1",
+        "text": "Recommends replacement as necessary merely because the existing battery is worn, while ignoring the specific affordable repair that meets the stated needs."
+      },
+      {
+        "id": "h2",
+        "text": "Claims either option is guaranteed to remain reliable for an invented number of years or treats the shop’s stated checks as proof that no future faults can occur."
+      }
+    ],
+    "usefulness": [
+      {
+        "id": "u1",
+        "text": "Identifies repair as the supported lower-cost path at 450.00 SEK, saving 1,050.00 SEK in immediate spending against replacement."
+      },
+      {
+        "id": "u2",
+        "text": "Connects the shop’s acceptance test and the existing laptop’s sufficient performance to the buyer’s actual requirements."
+      },
+      {
+        "id": "u3",
+        "text": "Attributes condition and diagnosis to their sources and preserves ordinary remaining-life uncertainty without blocking a proportionate decision."
+      }
+    ],
+    "acceptable_outcomes": [
+      "Prefer the quoted repair unless new evidence changes the diagnosis or needs; replacement remains a more expensive option with its own condition uncertainty."
+    ]
+  }
+}

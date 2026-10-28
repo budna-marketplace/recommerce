@@ -1,6 +1,6 @@
 # Recommerce Checks
 
-A small regression pack for second-hand discovery and decision assistance: 28 synthetic cases, 17 for Inspect and 11 for Buy. Most concern cordless drills; a few use supplied monitor specifications or furniture logistics. They are contrast cases, not single-variable experiments or evidence of broad shopping competence.
+A small regression pack for six second-hand decision workflows: 44 synthetic cases—17 for Inspect, 11 for Buy, and four each for Kits, Collect, Keep, and Second Look. They are contrast cases, not single-variable experiments or evidence of broad shopping competence.
 
 ## What is checked
 
@@ -16,6 +16,15 @@ A small regression pack for second-hand discovery and decision assistance: 28 sy
 The extended Inspect cases cover [adequate prior observation](cases/rc-013.json), [pre-payment risk](cases/rc-014.json), [model-revision scope](cases/rc-015.json), [integrated batteries](cases/rc-016.json), and [unsafe battery testing](cases/rc-027.json).
 
 Buy cases cover [auction versus complete purchase prices](cases/rc-017.json), [no qualifying options](cases/rc-018.json), [unknown costs](cases/rc-019.json), [duplicate listings](cases/rc-020.json), [changed availability and unidentified models](cases/rc-021.json), [search failures](cases/rc-022.json), [monitor compatibility](cases/rc-023.json), [furniture logistics](cases/rc-024.json), [seller instructions and reputation](cases/rc-025.json), [missing search tools](cases/rc-026.json), and [mixed currencies](cases/rc-028.json).
+
+The other workflows each have four focused cases:
+
+| Skill | Cases | Focus |
+| --- | --- | --- |
+| Kits | `rc-029`–`rc-032` | Complete signal/component paths, owned parts, shared costs, and changed components |
+| Collect | `rc-033`–`rc-036` | Access routes, measured controls, vehicle limits, and disassembly constraints |
+| Keep | `rc-037`–`rc-040` | Future repair/replacement costs, uncertain diagnoses, sunk costs, and affordability |
+| Second Look | `rc-041`–`rc-044` | Changed terms, unverified freshness, item identity, and supported unchanged decisions |
 
 Each case declares its `skill` and has a buyer request, source-labelled synthetic evidence, hard-failure criteria, usefulness criteria, and acceptable outcomes. Multiple conclusions can be reasonable. Review observable behavior, not wording or whether the assistant matches one model answer.
 
@@ -36,7 +45,7 @@ To validate only the casefiles without installing development dependencies:
 node checks/check.ts validate
 ```
 
-Every command optionally accepts `--skill recommerce-buy` or `--skill recommerce-inspect`. Omit the flag to use all cases. Keep the same selection when exporting inputs, creating a review template, and scoring that review. Unknown skills and empty selections are rejected.
+Every command optionally accepts `--skill` with one of `recommerce-buy`, `recommerce-kits`, `recommerce-inspect`, `recommerce-collect`, `recommerce-keep`, or `recommerce-second-look`. Omit the flag to use all cases. Keep the same selection when exporting inputs, creating a review template, and scoring that review. Unknown skills and empty selections are rejected.
 
 These commands do not call a model or a marketplace. They do not establish that the skill improves decisions.
 

@@ -1,0 +1,59 @@
+{
+  "id": "rc-036",
+  "skill": "recommerce-collect",
+  "title": "Curbside is not the third floor",
+  "pair": "collection-constraints",
+  "category": "wardrobes",
+  "request": "I found this wardrobe and would like to collect it within an inclusive 700.00 SEK total. Would the supplied delivery quote solve the collection problem? Give the next practical steps.",
+  "evidence": [
+    {
+      "id": "listing",
+      "kind": "seller_claim",
+      "text": "Fictional seller asks 250.00 SEK for a tall assembled wardrobe on the third floor with no lift. Seller gives dimensions 200 by 100 by 60 cm. Weight, exact model and assembly instructions are unknown. Seller has not agreed to disassembly or to carry it downstairs."
+    },
+    {
+      "id": "buyer",
+      "kind": "buyer_observation",
+      "text": "My destination space fits the wardrobe dimensions. The seller’s stairs have narrow turns, but their dimensions have not been measured. I do not have a crew or tools, and cannot carry the assembled wardrobe. The destination is at ground level."
+    },
+    {
+      "id": "quote",
+      "kind": "seller_claim",
+      "text": "Fictional carrier quotes 300.00 SEK for transport from the seller’s pavement to the buyer’s pavement, including vehicle and fuel. Seller must bring the item to the pavement. The quote expressly excludes stairs, indoor carrying, disassembly, packing and reassembly. No quote for those services has been supplied."
+    },
+    {
+      "id": "generic-guide",
+      "kind": "model_documentation",
+      "text": "A fictional generic flat-pack guide shows how a different wardrobe model can be dismantled. It does not identify this wardrobe’s construction, fixings, safe disassembly sequence or ability to be reassembled."
+    }
+  ],
+  "rubric": {
+    "hard_failures": [
+      {
+        "id": "h1",
+        "text": "Treats the curbside quote as covering removal from the third floor or calls 550.00 SEK the confirmed complete collection cost."
+      },
+      {
+        "id": "h2",
+        "text": "Assumes this wardrobe can safely be dismantled or that the seller permits it based on the unrelated generic guide."
+      }
+    ],
+    "usefulness": [
+      {
+        "id": "u1",
+        "text": "Explains the gap between the carrier’s pickup point and the wardrobe’s actual location."
+      },
+      {
+        "id": "u2",
+        "text": "Requests exact model or relevant instructions, seller permission where needed, measured stair access, and a qualified crew’s scoped quote before presenting a feasible move."
+      },
+      {
+        "id": "u3",
+        "text": "Identifies the 550.00 SEK known subtotal and only 150.00 SEK remaining for all missing services, without inventing a service price or unsafe handling plan."
+      }
+    ],
+    "acceptable_outcomes": [
+      "Pause commitment pending a complete access and carrying plan with an all-in quote; declining this item is also reasonable if those requirements cannot be satisfied."
+    ]
+  }
+}

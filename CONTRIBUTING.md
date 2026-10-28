@@ -1,44 +1,56 @@
-# Contributing
+# Contributing to Recommerce
 
-Start with a buying mistake, a misleading conclusion, or a useful next step the assistant missed. Explain the observable difference your change should make.
+Help improve the decisions these skills produce. Report misleading recommendations, missed dependencies, or unnecessary questions. Contribute clearer guidance and realistic cases the checks do not cover.
 
-Useful contributions include a missed required accessory, an incorrect compatibility claim, a stale recommendation, an unnecessary question, or a search that discarded suitable listings. Describe the request, the evidence available at the time, the answer, and why it was misleading. Replace real identities and listing details with the smallest synthetic example that preserves the problem.
+## Report a problem
 
-## Repository map
+Describe:
 
-| Path | Purpose |
+- What the person asked and the constraints that mattered.
+- What evidence and tools the assistant had.
+- What it recommended, and the specific mistake or omission.
+- What a useful answer should have established or asked next.
+
+Use a small synthetic example in place of real listings, identities, addresses, or private conversations. Include the skill, model, and relevant tool versions when known. A reproducible mistake is more useful than a general request to make the skill smarter.
+
+## Improve a skill
+
+Choose the workflow that owns the decision:
+
+| Skill folder | Contributions belong here when they concern… |
 | --- | --- |
-| `skills/recommerce-buy/` | Independently installable discovery and comparison workflow |
-| `skills/recommerce-inspect/` | Independently installable assessment and inspection workflow |
-| `checks/cases/` | Synthetic inputs, reviewer rubrics, and acceptable outcomes |
-| `checks/check.ts` | Offline validation, evaluation-input export, and review summaries |
-| `checks/check.test.ts` | Regression tests for the evaluation tooling |
-| `examples/` | Illustrative output, clearly labelled as such |
-| `.github/workflows/checks.yml` | Type checking, case validation, and runner tests |
+| `skills/recommerce-buy/` | Discovery, candidate comparison, purchase terms, and complete costs |
+| `skills/recommerce-kits/` | Component dependencies, compatibility, substitutions, and a shared budget |
+| `skills/recommerce-inspect/` | Listing-specific condition questions and inspection guidance |
+| `skills/recommerce-collect/` | Access, transport, handling, disassembly constraints, and collection costs |
+| `skills/recommerce-keep/` | Keeping, maintenance, repair, upgrade, and replacement decisions |
+| `skills/recommerce-second-look/` | Changes to an earlier recommendation and facts still unverified |
 
-The tooling uses TypeScript and Node.js 24.12+, with no runtime dependencies. TypeScript and Node type definitions are development dependencies. Installing a skill requires none of this tooling. Each skill must contain its required references; no sibling skill or repository-level checks may be required at runtime.
+Start with `SKILL.md`. Add the smallest instruction that addresses the demonstrated failure. Keep the entrypoint focused; put substantial category-specific guidance in a reference inside that skill's folder, linked from the entrypoint.
 
-## Skills
+Each skill must remain independently installable. Do not require sibling skills, repository-level checks, local machine paths, credentials, or private endpoints. Reuse an existing workflow when it fits rather than introducing another skill for a minor variation.
 
-Keep the entrypoint short and place category-specific guidance in its skill's references. Preserve the user's goal and budget. Ask only questions that can change the decision. Guidance must distinguish what is known from what still needs a person, a quote, an exact model label, or a fresh source.
+For technical or category advice, cite applicable primary documentation. Match the actual model and variant; do not generalize an example into a universal rule. Keep seller claims, specifications, and human observations distinct. Ordinary uncertainty should not automatically block a reasonable decision, and a short checklist must not imply certification.
 
-For category advice, cite primary documentation and state its limits. Do not turn a manufacturer example into a universal compatibility rule. Distinguish cosmetic wear from suspected safety damage. Avoid instructions that require opening batteries or chargers, bypassing guards, or operating equipment with suspected safety damage.
+Keep search and assessment separate from transactions. Changes must not grant permission to message sellers, reserve items, bid, purchase, book transport, or perform repairs.
 
-## Casefiles
+## Add a casefile
 
-Copy an existing case's shape and give it a new stable `rc-NNN` identifier. Set `skill` to `recommerce-buy` or `recommerce-inspect`. Put only the buyer request and evidence into the input fields. Keep the memorable title, expected outcomes, and grading criteria in their dedicated fields.
+1. Copy a relevant file from `checks/cases/` and choose an unused `rc-NNN` identifier. Match the filename to that ID.
+2. Set `skill` to the owning skill's directory name. Write the buyer request and the evidence that was actually available in the scenario.
+3. Add observable hard failures, useful behaviors, and acceptable outcomes. Several answers may be valid; the rubric should test the decision rather than exact wording.
+4. Add a normal control when useful. A missing charger should be caught, but a confirmed included charger should not trigger another unnecessary question.
+5. Manually check arithmetic, timing, compatibility assumptions, and whether the evidence supports the expected outcome.
 
-- All listing records, identities, model names, and quotations in the cases must be synthetic. Use fictional compatibility documentation and label it as such.
-- Give the buyer a concrete intended use and enough evidence to make progress. An unknown should be intentional and material.
-- Add a normal control alongside a trap when appropriate. Do not reward blanket refusals or unnecessary questions.
-- Make hard failures observable and serious, such as claiming that a box is a drill, inventing a delivered total, or treating seller instructions as authority.
-- Make usefulness criteria specific enough that two reviewers can discuss disagreement. Allow multiple valid recommendations and conditional conclusions.
-- Record timestamps when temporal order matters. An observation time alone must not imply seller-confirmed availability.
-- Do not use a case title to hint at the answer in the request or evidence.
+Keep every marketplace record, identity, product name, and quote in the case synthetic. Label fictional documentation. Give the buyer enough information to make progress; missing information should be intentional and consequential.
 
-Case structure validation does not verify arithmetic, compatibility facts, rubric quality, or safety. Review those manually. Before publishing results, check the preserved response against every scored criterion and explain borderline calls.
+Put answer-revealing titles, rubrics, and expected outcomes only in their dedicated fields. The evaluated assistant receives the request and evidence, not the answer key. Record source event and observation times when they affect the decision.
 
-## Verification
+For a new independently installable workflow, also add its name to the runner's accepted skill list and extend the routing/export test. Discuss a proposed new workflow before building a separate integration or framework.
+
+## Validate the change
+
+The development tooling uses TypeScript and Node.js 24.12+. From the repository root:
 
 ```sh
 npm ci --ignore-scripts
@@ -46,20 +58,20 @@ npm run check
 git diff --check
 ```
 
-For behavior changes, follow [the evaluation procedure](checks/README.md). Keep raw results under the ignored `checks/results/` directory or an external directory; do not commit real buyer or seller data. A proposed public result must use publishable inputs, preserve the actual response, state model/tool versions and conditions, and disclose missing or failed runs.
+`npm run check` verifies TypeScript, casefile structure, and runner behavior. It does not grade shopping advice. Add a focused regression test when changing non-trivial runner logic; prose edits do not need tests that merely match their wording.
 
-Describe the problem, the resulting behavior, and verification in a pull request. Keep unrelated fixes separate. The repository is currently private and under initial review; contributions do not imply permission to publish it.
+For a skill change, verify discovery:
 
-## Integration and scope
+```sh
+npx skills add . --list
+```
 
-[Budna MCP](https://github.com/budna-marketplace/mcp) supplies marketplace tools and retains its own releases and tool-contract tests. Recommerce supplies portable workflows and behavioral cases. Keep integration-specific details in optional skill references; do not embed credentials, private endpoints, live listing captures, or provider SDKs.
+Then exercise realistic inputs with only the installed skill and its own references available. Follow [Recommerce Checks](checks/README.md) for exporting inputs, recording responses, and reviewing results. Compare the same model, evidence, tools, and settings when claiming improvement. Preserve regressions and unresolved results as well as successes.
 
-Prefer cases that reveal a real weakness over accumulating universal instructions. Compare the same model, inputs, tools, and settings with and without a proposed change; preserve regressions as well as improvements. An AI-authored or AI-reviewed example must not be represented as independent human validation.
+## Submit the contribution
 
-Before claiming broader category support, obtain appropriate domain review and useful cases. Kits, collection planning, and additional category references are possible expansions, not implemented promises. Keeping an existing item and refreshing changed facts already belong in ordinary assessment. Do not add an autonomous transaction workflow as an incidental extension of search.
+Open a focused pull request explaining the concrete problem, resulting behavior, and validation. Include a minimized case or before/after example when it helps a reviewer understand the change. Separate unrelated fixes.
 
-## Background
+Commit curated synthetic cases and their rubrics. Keep generated responses, temporary exports, and run artifacts in the ignored `checks/results/` directory or outside the checkout. A deliberately published evaluation should preserve publishable inputs, actual responses, versions, grading method, and failures; identify AI-assisted review as such.
 
-The layout takes structural inspiration from [Cloudflare's security-audit skill](https://github.com/cloudflare/security-audit-skill): focused entrypoints, supporting guidance, and explicit validation. No Cloudflare endorsement is implied.
-
-[ShoppingComp](https://arxiv.org/abs/2511.22978) studies shopping discovery, reports, and safety-related decisions. [BazaarBench](https://arxiv.org/abs/2610.06748) studies delegation safety in simulated C2C marketplaces. Recommerce Checks is a small development regression pack, not a replacement for those evaluations or a claim of general shopping competence.
+Do not include live listing captures, personal information, secrets, or private source material.

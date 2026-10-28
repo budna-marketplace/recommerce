@@ -7,7 +7,14 @@ import { parseArgs } from 'node:util';
 import { createHash } from 'node:crypto';
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
-const SKILLS = ['recommerce-inspect', 'recommerce-buy'] as const;
+const SKILLS = [
+  'recommerce-buy',
+  'recommerce-kits',
+  'recommerce-inspect',
+  'recommerce-collect',
+  'recommerce-keep',
+  'recommerce-second-look',
+] as const;
 const KINDS = new Set(['seller_claim', 'model_documentation', 'buyer_observation', 'marketplace_record']);
 const GROUPS = ['hard_failures', 'usefulness'] as const;
 const RUN_FIELDS = ['label', 'model', 'tool_setup', 'source_ref', 'reviewer'] as const;
@@ -239,7 +246,7 @@ function main(): number {
     const [command, ...args] = process.argv.slice(2);
     if (!command || command === '--help') {
       console.log('Usage: node checks/check.ts validate | export --output DIR [--with-skill] | review-template --output FILE | score FILE\n'
-        + 'All commands accept --skill recommerce-inspect|recommerce-buy; omitted selects all cases.');
+        + `All commands accept --skill ${SKILLS.join('|')}; omitted selects all cases.`);
       return command ? 0 : 2;
     }
     require(['validate', 'export', 'review-template', 'score'].includes(command), 'unknown command');

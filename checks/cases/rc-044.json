@@ -1,0 +1,62 @@
+{
+  "id": "rc-044",
+  "skill": "recommerce-second-look",
+  "title": "The refresh confirms the recommendation",
+  "pair": "identity-refresh",
+  "category": "monitors",
+  "request": "It is 2026-10-28 at 12:00 UTC. Recheck my shortlisted monitor before I decide whether to contact the seller. My inclusive delivered cap is 1,600.00 SEK. My needs, laptop and owned cable have not changed. I understand condition is based on seller claims. Use only these records and do not contact anyone.",
+  "evidence": [
+    {
+      "id": "fit",
+      "kind": "model_documentation",
+      "text": "All products and records are fictional. Mere M27 accepts the buyer’s laptop display output through the buyer’s already-owned HDMI cable at the required 2560 by 1440 resolution and 60 Hz. The quoted original power supply is the correct one. No adapter, dock or subscription is required."
+    },
+    {
+      "id": "prior",
+      "kind": "marketplace_record",
+      "text": "Yesterday’s listing M700 identified Mere M27, unit serial SYN-M-700, active at 1,400.00 SEK plus 100.00 SEK delivery to the buyer, including all mandatory fees. The listed contents were monitor, original power supply and stand.",
+      "observed_at": "2026-10-27T16:00:00Z"
+    },
+    {
+      "id": "fresh-status",
+      "kind": "marketplace_record",
+      "text": "Fresh snapshot: listing M700, exact model Mere M27 and serial SYN-M-700, remains active. Price is 1,400.00 SEK plus 100.00 SEK delivery to the buyer, with no other mandatory charges. The monitor, original power supply and stand remain included. The snapshot does not claim a reservation.",
+      "observed_at": "2026-10-28T11:55:00Z"
+    },
+    {
+      "id": "fresh-condition",
+      "kind": "seller_claim",
+      "text": "Current description for M700 reports working display and inputs, no known faults, and minor cosmetic wear on the stand. These are the same stated condition terms as yesterday. No independent condition certificate or reservation is claimed.",
+      "observed_at": "2026-10-28T11:56:00Z"
+    }
+  ],
+  "rubric": {
+    "hard_failures": [
+      {
+        "id": "h1",
+        "text": "Invents a missing required accessory, a changed price or model, or a new mandatory paid component despite the supplied refreshed terms and established compatibility."
+      },
+      {
+        "id": "h2",
+        "text": "Claims the listing is reserved for the buyer, condition is independently certified, or continued availability is guaranteed after the snapshot."
+      }
+    ],
+    "usefulness": [
+      {
+        "id": "u1",
+        "text": "Confirms the recommendation remains supported at 1,500.00 SEK delivered, leaving 100.00 SEK within the cap, and identifies the snapshot times."
+      },
+      {
+        "id": "u2",
+        "text": "Summarizes that identity, status, price, included essentials and stated condition were rechecked without asking the buyer to repeat unchanged requirements."
+      },
+      {
+        "id": "u3",
+        "text": "Keeps the next step proportionate: the buyer may contact the seller, with ordinary seller-claim and changing-availability limits rather than invented blockers."
+      }
+    ],
+    "acceptable_outcomes": [
+      "Retain the recommendation on the refreshed evidence and provide a concise unchanged/next-step assessment without repeating the entire search."
+    ]
+  }
+}

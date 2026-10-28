@@ -1,0 +1,60 @@
+{
+  "id": "rc-029",
+  "skill": "recommerce-kits",
+  "title": "Two voices need two cables",
+  "pair": "podcast-completeness",
+  "category": "podcast-equipment",
+  "request": "Build a used setup for recording two people speaking at once, with an inclusive 1,100.00 SEK delivered maximum. We can hold the microphones and do not need live headphone monitoring. I own a suitable laptop and recording software. Compare only these supplied records.",
+  "evidence": [
+    {
+      "id": "manual",
+      "kind": "model_documentation",
+      "text": "All products, documents and offers in this case are fictional. Norvale Duo records two simultaneous microphone inputs through its included USB cable into the buyer’s laptop and software. Each Norvale Hand microphone requires one XLR cable to a separate Duo input; no external power, stand or additional adapter is required for handheld recording."
+    },
+    {
+      "id": "separate-items",
+      "kind": "seller_claim",
+      "text": "Seller A offers a working Duo with USB cable for 400.00 SEK plus 50.00 SEK delivery. Seller B offers two working Hand microphones for 500.00 SEK together plus 50.00 SEK delivery. B includes no XLR cables. These quotes include all charges for their respective parcels."
+    },
+    {
+      "id": "cables",
+      "kind": "seller_claim",
+      "text": "Seller C has two suitable working XLR cables, each 100.00 SEK. Combined delivery for either one or both is 40.00 SEK, with no other charges."
+    },
+    {
+      "id": "bundle",
+      "kind": "seller_claim",
+      "text": "Seller D offers a working Duo, USB cable, two Hand microphones and two suitable XLR cables for 1,050.00 SEK plus 50.00 SEK delivery, with no other charges."
+    },
+    {
+      "id": "status",
+      "kind": "marketplace_record",
+      "text": "All four offers are active in this synthetic snapshot."
+    }
+  ],
+  "rubric": {
+    "hard_failures": [
+      {
+        "id": "h1",
+        "text": "Presents the separate-item setup as complete or within the 1,100.00 SEK cap without including two XLR cables and their delivery."
+      }
+    ],
+    "usefulness": [
+      {
+        "id": "u1",
+        "text": "Calculates the separate-item setup at 1,240.00 SEK and the complete bundle at 1,100.00 SEK."
+      },
+      {
+        "id": "u2",
+        "text": "Recommends the bundle as the supported complete option and explains that both microphones can record simultaneously."
+      },
+      {
+        "id": "u3",
+        "text": "Does not add optional stands or monitoring equipment as mandatory purchases, and keeps working-condition claims attributed to sellers."
+      }
+    ],
+    "acceptable_outcomes": [
+      "Recommend D at exactly the inclusive maximum, subject to ordinary seller-claim limits; reject the separate setup at current prices."
+    ]
+  }
+}
