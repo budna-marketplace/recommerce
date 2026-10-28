@@ -1,6 +1,7 @@
 ---
 name: recommerce-buy
 description: Find and compare second-hand listings against the buyer's needs, complete cost, compatibility, and collection or delivery constraints. Use for used-item searches, supplied shortlists, and rechecking options before a decision. Produces an evidence-backed shortlist; does not contact sellers or transact.
+license: MIT
 ---
 
 # Recommerce Buy

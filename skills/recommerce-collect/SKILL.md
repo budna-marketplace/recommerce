@@ -1,6 +1,7 @@
 ---
 name: recommerce-collect
 description: Assess whether a second-hand item can realistically be collected and moved from the seller's room to the buyer's destination. Use for dimensions, access, transport, disassembly, handling needs, costs, and collection constraints. Produces a conditional collection plan and prioritized missing measurements; does not book transport or arrange collection.
+license: MIT
 ---
 
 # Recommerce Collect
