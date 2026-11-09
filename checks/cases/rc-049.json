@@ -1,0 +1,68 @@
+{
+  "id": "rc-049",
+  "skill": "recommerce-kits",
+  "title": "A complete kit can mix new and pre-owned components",
+  "pair": "mixed-condition-kit",
+  "category": "podcast-equipment",
+  "request": "Plan a complete setup for recording two people speaking simultaneously from only these supplied offers. New and pre-owned components are both acceptable. My inclusive delivered maximum is 1,350.00 SEK. I own a suitable laptop, recording software and one compatible XLR cable. We will hold the microphones and do not need live headphone monitoring.",
+  "evidence": [
+    {
+      "id": "manual",
+      "kind": "model_documentation",
+      "text": "All products, documents, sellers and offers in this case are fictional. Synthetic Norvale documentation: Duo records two simultaneous microphone inputs through its included USB cable into the buyer's laptop and software. Each Hand microphone requires its own compatible XLR cable into a separate Duo input. These dynamic microphones need no external power, stand or additional adapter for handheld recording. The buyer's owned XLR cable is documented as compatible."
+    },
+    {
+      "id": "interface",
+      "kind": "seller_claim",
+      "text": "A offers a Duo interface with USB cable, described as new and unused, for 650.00 SEK plus 50.00 SEK delivery. This is the complete charge for that parcel. No independent condition observation, receipt or warranty terms are supplied."
+    },
+    {
+      "id": "microphones",
+      "kind": "seller_claim",
+      "text": "B offers two pre-owned Hand microphones together for 500.00 SEK plus 50.00 SEK combined delivery. This is the complete charge for the parcel. The seller says both work; the buyer has not tested them. No XLR cables are included."
+    },
+    {
+      "id": "second-cable",
+      "kind": "seller_claim",
+      "text": "C offers one new compatible XLR cable for 80.00 SEK plus 20.00 SEK delivery, with no other charges. The compatibility of this exact cable is covered by the supplied synthetic documentation."
+    },
+    {
+      "id": "status",
+      "kind": "marketplace_record",
+      "text": "All three fixed-price offers are active in this synthetic snapshot. No wider marketplace search has been performed."
+    }
+  ],
+  "rubric": {
+    "hard_failures": [
+      {
+        "id": "h1",
+        "text": "Rejects the supported setup solely because some components are new or because it mixes new and pre-owned items."
+      },
+      {
+        "id": "h2",
+        "text": "Uses fewer than two XLR cables for the simultaneous microphone paths, or requires purchasing two cables while ignoring the buyer's owned compatible cable."
+      },
+      {
+        "id": "h3",
+        "text": "Calls the setup within budget using a total that omits a supplied delivery charge, or treats new and working labels as independently verified condition or warranty."
+      }
+    ],
+    "usefulness": [
+      {
+        "id": "u1",
+        "text": "Calculates A 700.00 SEK plus B 550.00 SEK plus C 100.00 SEK as a supported 1,350.00 SEK delivered subtotal at the inclusive maximum."
+      },
+      {
+        "id": "u2",
+        "text": "Shows two microphones, the two-input interface and included USB cable, one owned XLR cable and one purchased XLR cable forming two simultaneous input paths."
+      },
+      {
+        "id": "u3",
+        "text": "Keeps seller condition claims unverified, attributes compatibility to the supplied documentation, and does not add unnecessary stands, external power or monitoring equipment."
+      }
+    ],
+    "acceptable_outcomes": [
+      "The mixed-condition setup is supported on paper at exactly the inclusive maximum, subject to the stated limits of seller claims and current availability."
+    ]
+  }
+}
