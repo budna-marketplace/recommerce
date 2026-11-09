@@ -1,6 +1,6 @@
 # Recommerce Checks
 
-A small regression pack for six second-hand decision workflows: 47 synthetic cases—20 for Inspect, 11 for Buy, and four each for Kits, Collect, Keep, and Second Look. They are contrast cases, not single-variable experiments or evidence of broad shopping competence.
+A small regression pack for the six Recommerce workflows: 49 synthetic cases—20 for Inspect, 12 for Buy, five for Kits, and four each for Collect, Keep, and Second Look. The original 47 cases focus on pre-owned decisions; two cases add new offers and setups mixing new and pre-owned items. They are contrast cases, not single-variable experiments or evidence of broad shopping competence.
 
 ## What is checked
 
@@ -19,11 +19,13 @@ Additional Inspect cases exercise [an intermittent camera fault](cases/rc-045.js
 
 Buy cases cover [auction versus complete purchase prices](cases/rc-017.json), [no qualifying options](cases/rc-018.json), [unknown costs](cases/rc-019.json), [duplicate listings](cases/rc-020.json), [changed availability and unidentified models](cases/rc-021.json), [search failures](cases/rc-022.json), [monitor compatibility](cases/rc-023.json), [furniture logistics](cases/rc-024.json), [seller instructions and reputation](cases/rc-025.json), [missing search tools](cases/rc-026.json), and [mixed currencies](cases/rc-028.json).
 
-The other workflows each have four focused cases:
+New and mixed offers are covered by [a new/pre-owned comparison](cases/rc-048.json) and [a setup combining both](cases/rc-049.json). These cases keep seller condition claims separate from observations and documentation.
+
+The other workflows also have focused cases:
 
 | Skill | Cases | Focus |
 | --- | --- | --- |
-| Kits | `rc-029`–`rc-032` | Complete signal/component paths, owned parts, shared costs, and changed components |
+| Kits | `rc-029`–`rc-032`, `rc-049` | Complete signal/component paths, owned parts, shared costs, changed components, and new/pre-owned combinations |
 | Collect | `rc-033`–`rc-036` | Access routes, measured controls, vehicle limits, and disassembly constraints |
 | Keep | `rc-037`–`rc-040` | Future repair/replacement costs, uncertain diagnoses, sunk costs, and affordability |
 | Second Look | `rc-041`–`rc-044` | Changed terms, unverified freshness, item identity, and supported unchanged decisions |

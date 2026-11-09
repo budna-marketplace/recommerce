@@ -1,8 +1,8 @@
 # Recommerce by Budna
 
-**Agent skills for better second-hand decisions.**
+**Agent skills for comparing new and pre-owned items.**
 
-Portable agent skills for researching second-hand purchases. Recommerce covers discovery, complete setups, inspection, collection planning, repair-versus-replacement decisions, and reassessment before commitment.
+Portable agent skills for comparing new and pre-owned marketplace listings and preparing a purchase. Recommerce covers discovery, complete setups, inspection, collection planning, repair-versus-replacement decisions, and reassessment before commitment.
 
 A listing is incomplete, changing evidence. The skills distinguish what a seller claims, what product documentation supports, and what still needs verification. The objective is a suitable purchase at a supported total cost—including the option to keep an existing item.
 
@@ -76,7 +76,7 @@ For other Agent Skills-compatible hosts with GitHub import, select the relevant 
 
 ## Design principles and scope
 
-- **Claims retain their sources.** Model specifications do not certify a particular used unit; ratings and identity badges do not establish condition.
+- **Claims retain their sources.** Model specifications do not certify a particular unit; ratings and identity badges do not establish condition.
 - **Compare usable totals.** Required accessories, fees, delivery, and collection costs belong in the decision. A current auction bid is not a guaranteed purchase price.
 - **Respect the buyer's constraints.** Do not silently relax requirements, invent availability, or fill a shortlist with unsuitable options.
 - **Keep assessment separate from transactions.** The skills do not contact sellers, reserve items, bid, or purchase. They do not certify condition, authenticity, or future availability.

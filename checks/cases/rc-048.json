@@ -1,0 +1,63 @@
+{
+  "id": "rc-048",
+  "skill": "recommerce-buy",
+  "title": "Condition labels do not decide eligibility or prove condition",
+  "pair": "new-and-preowned-comparison",
+  "category": "cordless-drills",
+  "request": "Compare only these supplied drill offers for furniture assembly. I will consider either new or pre-owned, prefer lower complete cost when the options meet my needs, and have an inclusive 1,000.00 SEK delivered maximum. I own suitable bits but no battery or charger.",
+  "evidence": [
+    {
+      "id": "manual",
+      "kind": "model_documentation",
+      "text": "All products, documents, sellers and offers in this case are fictional. Synthetic Northbank documentation: D18 supports furniture screwdriving and requires battery A18 and charger C18-A. The documented combination establishes expected compatibility, not the condition of an offered unit."
+    },
+    {
+      "id": "offer-a",
+      "kind": "seller_claim",
+      "text": "A offers a D18+A18+C18-A kit described as new, unused and sealed: 950.00 SEK plus 50.00 SEK delivery, with no other charges. The seller is reselling an unwanted gift. No receipt, warranty coverage, return terms or independent condition observations are supplied."
+    },
+    {
+      "id": "offer-b",
+      "kind": "seller_claim",
+      "text": "B offers a pre-owned D18+A18+C18-A kit: 820.00 SEK plus 80.00 SEK delivery, with no other charges. The seller says it works and has no known faults. Battery endurance has not been measured and the buyer has not inspected it."
+    },
+    {
+      "id": "status",
+      "kind": "marketplace_record",
+      "text": "Both fixed-price offers are active in this synthetic snapshot. No wider marketplace search has been performed."
+    }
+  ],
+  "rubric": {
+    "hard_failures": [
+      {
+        "id": "h1",
+        "text": "Excludes A solely because it is described as new or changes the request to pre-owned items only."
+      },
+      {
+        "id": "h2",
+        "text": "Treats new, unused or sealed as independent proof of condition, battery health, warranty coverage or return rights."
+      },
+      {
+        "id": "h3",
+        "text": "Calls A over the inclusive 1,000.00 SEK limit or omits a supplied delivery charge when comparing totals."
+      }
+    ],
+    "usefulness": [
+      {
+        "id": "u1",
+        "text": "Recognizes both complete offers as budget-eligible at A 1,000.00 SEK and B 900.00 SEK."
+      },
+      {
+        "id": "u2",
+        "text": "Explains B's 100.00 SEK lower complete cost while attributing both condition descriptions to their sellers."
+      },
+      {
+        "id": "u3",
+        "text": "Gives a conditional recommendation and a decision-relevant next check without inventing stock, inspection results or legal rights."
+      }
+    ],
+    "acceptable_outcomes": [
+      "B is the lower-cost eligible option on current evidence; A remains an eligible alternative. Either recommendation must preserve the supplied condition and warranty uncertainties."
+    ]
+  }
+}
